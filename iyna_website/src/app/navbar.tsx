@@ -8,7 +8,7 @@ interface NavbarProps {
     darken?: boolean;
 }
 
-export default function Navbar({selectedPage, darken}: NavbarProps) {
+export default function Navbar({selectedPage, darken = false}: NavbarProps) {
     const [page, setPage] = useState(-1);
     const [dark, setDark] = useState(darken || false);
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function Navbar({selectedPage, darken}: NavbarProps) {
             } else {
                 document.querySelector('.wrapper')?.classList.remove('selected');
                 document.querySelector('.wrapper')?.classList.remove('backdrop-blur-lg');
-                setDark(darken || true);
+                setDark(darken);
             }
         };
         document.addEventListener('scroll', () => {handleScroll();});
