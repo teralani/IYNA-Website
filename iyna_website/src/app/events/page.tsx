@@ -16,7 +16,7 @@ export default function EventsPage() {
                     title="Workshops"
                     description="Join us for our annual summer neuroscience workshop, where you can learn about neuroscience topics and participate in hands-on activities."
                     imageSrc="/workshop.jpg"
-                    buttonText="Register Now"
+                    buttonText="Learn More"
                     number={1}
                 />
                 <Card 
@@ -45,8 +45,8 @@ export default function EventsPage() {
                 />
                 <Card 
                     title="NeuroPodcast"
-                    description="Listen into our podcast, where we discuss various neuroscience topics and interview experts in the field. If you're interested in neuroscience, this is the podcast for you!"
-                    imageSrc="/workshop.jpg"
+                    description="Tune into our podcast, where we discuss various neuroscience topics and interview experts in the field. If you're interested in neuroscience, this is the podcast for you!"
+                    imageSrc="/neuropodcast.jpg"
                     buttonText="Listen Now"
                     buttonLink="https://open.spotify.com/show/016sMZlvCkLjxqFIn3r14X?si=a0da89172a2a454e"
                     number={5}

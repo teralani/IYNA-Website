@@ -5,10 +5,12 @@ import React, { useState, useEffect } from 'react';
 
 interface NavbarProps {
     selectedPage: number;
+    darken?: boolean;
 }
 
-export default function Navbar({selectedPage}: NavbarProps) {
+export default function Navbar({selectedPage, darken}: NavbarProps) {
     const [page, setPage] = useState(-1);
+    const [dark, setDark] = useState(darken || false);
     useEffect(() => {
         const handlePageChange = (newPage: number) => {
             console.log( `Changing page to: ${newPage}`);
@@ -25,9 +27,11 @@ export default function Navbar({selectedPage}: NavbarProps) {
                 document.querySelector('.wrapper')?.classList.add('selected');
                 document.querySelector('.wrapper')?.classList.add('backdrop-blur-lg');
                 console.log('Scrolled down, adding selected class');
+                setDark(false);
             } else {
                 document.querySelector('.wrapper')?.classList.remove('selected');
                 document.querySelector('.wrapper')?.classList.remove('backdrop-blur-lg');
+                setDark(darken || true);
             }
         };
         document.addEventListener('scroll', () => {handleScroll();});
@@ -57,7 +61,7 @@ export default function Navbar({selectedPage}: NavbarProps) {
                                 height={90}
                                 className="h-24 w-auto"
                             />
-                            <div className="hidden @md:block name my-auto">
+                            <div className={`hidden @md:block name my-auto ${dark? "dark" : ""}`}>
                                 <div>
                                     <p className="text-3xl my-auto">
                                         LWSD Chapter
@@ -90,7 +94,7 @@ export default function Navbar({selectedPage}: NavbarProps) {
                         </button>
                     </div>
 
-                    <div className=" md:pt-0 md:pb-0 max-md:-left-5 max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] invisible md:visible md:bg-transparent h-screen justify-around py-[20svh] items-center w-screen flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12">
+                    <div className={`${dark? "dark" : ""} md:pt-0 md:pb-0 max-md:-left-5 max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] invisible md:visible md:bg-transparent h-screen justify-around py-[20svh] items-center w-screen flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12`}>
                         <Link
                         href="/"
                         className={`${selectedPage == 0? "selected": ""} text-3xl md:text-lg a`}
@@ -117,7 +121,7 @@ export default function Navbar({selectedPage}: NavbarProps) {
                         </Link>
                     </div>
 
-                    <button className="hidden md:block contact flex-1 pr-20">
+                    <button className={`hidden md:block contact flex-1 pr-20 ${dark? "dark" : ""}`}>
                         <Link
                             href="mailto:iynalwsdchapter@gmail.com"
                             className=" text-lg border-1  px-8 py-3 rounded-full transition-colors duration-400 float-right"

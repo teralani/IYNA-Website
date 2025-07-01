@@ -31,7 +31,7 @@ export default function Profile({name, position, bio} : ProfileProps) {
             <h2 className="text-2xl font-bold text-center">{name}</h2>
             <p className="text-lg text-center my-3 font-bold text-gray-500">{position}</p>
             <p className="bio hidden w-auto h-auto mb-3">{bio}</p>
-            <button className="justify-center flex mx-auto bg-blue-500 text-sm border-1 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300" onClick={handleClick}>
+            <button className="justify-center flex mx-auto bg-purple text-sm border-1 text-white px-4 py-2 rounded-full hover:bg-lavender hover:text-purple transition-colors duration-300" onClick={handleClick}>
                 {more? "Show More" : "Show Less"}
             </button>
         </div>
