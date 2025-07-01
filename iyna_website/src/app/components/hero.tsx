@@ -59,8 +59,8 @@ export default function Hero() {
                     </g>
                  </svg>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[var(--foreground)]">
-                <h1 className="text-6xl font-bold mb-4 text-white">International Youth Neuroscience Association</h1>
-                <p className="text-xl mb-8 text-white">Lake Washington School District Chapter</p>
+                <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">International Youth Neuroscience Association</h1>
+                <p className="text-lg md:text-xl mb-8 text-white">Lake Washington School District Chapter</p>
                 <a href="/aboutus" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                     Learn More
                 </a>

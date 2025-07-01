@@ -11,6 +11,7 @@ interface NavbarProps {
 export default function Navbar({selectedPage, darken = false}: NavbarProps) {
     const [page, setPage] = useState(-1);
     const [dark, setDark] = useState(darken || false);
+
     useEffect(() => {
         const handlePageChange = (newPage: number) => {
             console.log( `Changing page to: ${newPage}`);
@@ -20,7 +21,6 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
         pages.forEach((page, index) => {
             page.addEventListener('mouseover', () => handlePageChange(index));
         });
-
         const handleScroll = () => {
             if (window.scrollY > 0 && window.innerWidth > 768) {
                 console.log('Scrolled down, adding selected class');
@@ -74,7 +74,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 </div>
                             </div>
                         </Link>
-                        <button onClick={() => {
+                        <button style={{scale: "0.75"}} onClick={() => {
                             const links = document.querySelector('.links');
                             if (links) links.classList.toggle('invisible');
                             }} className="z-50 md:hidden relative menu cursor-pointer ">
@@ -83,10 +83,10 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                     <animate dur="0.1s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
                                     <animate dur="0.1s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
                                 </path>
-                                <rect width="10" height="10" stroke="none">
+                                <rect width="5" height="5" stroke="none">
                                     <animate dur="1s" id="reverse" attributeName="width" begin="click" />
                                 </rect>
-                                <rect width="10" height="10" stroke="none">
+                                <rect width="5" height="5" stroke="none">
                                     <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
                                     <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
                                 </rect>
@@ -94,28 +94,28 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                         </button>
                     </div>
 
-                    <div className={`${dark? "dark" : ""} md:pt-0 md:pb-0 max-md:-left-5 max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] invisible md:visible md:bg-transparent h-screen justify-around py-[20svh] items-center w-screen flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12`}>
+                    <div className={`${dark? "dark" : ""} md:pt-0 md:pb-0 max-md:-left-5 max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] invisible md:visible md:bg-transparent h-screen justify-around py-[20svh] items-center w-[110dvw] flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12`}>
                         <Link
                         href="/"
-                        className={`${selectedPage == 0? "selected": ""} text-3xl md:text-lg a`}
+                        className={`${selectedPage == 0? "selected": ""} text-xl md:text-lg a`}
                         >
                         Home
                         </Link>
                         <Link
                         href="/aboutus"
-                        className={`${selectedPage == 1? "selected": ""} text-3xl md:text-lg a`}
+                        className={`${selectedPage == 1? "selected": ""} text-xl md:text-lg a`}
                         >
                         About Us
                         </Link>
                         <Link
                         href="/events"
-                        className={`${selectedPage == 2? "selected": ""} text-3xl md:text-lg a dropdown`}
+                        className={`${selectedPage == 2? "selected": ""} text-xl md:text-lg a dropdown`}
                         >
                         Events
                         </Link>
                         <Link
                         href="/team"
-                        className= {`${selectedPage == 3? "selected": ""} text-3xl md:text-lg a`}
+                        className= {`${selectedPage == 3? "selected": ""} text-xl md:text-lg a`}
                         >
                         Our Team
                         </Link>
