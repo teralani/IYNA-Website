@@ -1,71 +1,102 @@
 "use client"
-import React, {useEffect} from "react";
+import React, { useEffect, useRef, useState} from "react";
 import { ReactNode } from "react";
 
 export default function Carousel({ children }: { children: ReactNode }) {
+    const targetRef = useRef(null);
+    const sliderWrapper = useRef(null)
+    const [isVisible, setIsVisible] = useState(false);
+    const [isClicked, setIsClicked] = useState(false)
 
-
-
-    function handleControl(cardNum : number) {
-        const s = document.getElementsByClassName('slider__wrapper')[0];
+    const handleControl = React.useCallback((cardNum: number) => {
+        const s = sliderWrapper.current
         const o = 378;
-        s.scroll(o * cardNum, 0)
-    }
+        if (s) {
+            (s as HTMLElement).scroll(o * cardNum, 0);
+        }
+    }, []);
 
     useEffect(() => {
-        const controlsContainer = document.querySelectorAll('.controls-container')
-        const outer = document.querySelectorAll('.outer')
-        const dot = document.querySelectorAll('.dot')
-        const dotHiglight = document.querySelectorAll('.dot-two-button-highlight')
-        const blue = document.querySelectorAll('.blue-thing')
-        if(window.scrollY > 100) {
-            controlsContainer.forEach((el) => el.classList.remove('closed'));
-            outer.forEach((el) => el.classList.remove('invisible'));
-            controlsContainer.forEach((el) => el.classList.add('controls-container-seen'));
-            dot.forEach((el) => el.classList.add('dot-seen'));
-            dotHiglight.forEach((el) => el.classList.add('dot-seen'));
-            blue.forEach((el) => el.classList.add('blue-thing-seen'));
-        } else {
-            outer.forEach((el) => el.classList.add('invisible'));
-            controlsContainer.forEach((el) => el.classList.remove('controls-container-seen'));
-            controlsContainer.forEach((el) => el.classList.add('closed'));
-            dot.forEach((el) => el.classList.remove('dot-seen'));
-            dotHiglight.forEach((el) => el.classList.add('dot-seen'));
-            blue.forEach((el) => el.classList.remove('blue-thing-seen'));
+        let i = 0
+        const timer = setInterval(() => {
+            // Accessing All the carousel Items 
+            if (!isClicked) {
+                if(i < 6){
+                    handleControl(i);
+                    if (targetRef.current) {
+                        const inputs = (targetRef.current as Element).querySelectorAll("input");
+                        console.log(inputs);
+                        inputs[i === 0 ? 5 : i - 1].checked = false;
+                        inputs[i].checked = true;
+                    }
+                }
+
+                if(i < 6){
+                    i++;
+                }
+                else{
+                    i=0;
+                }
+            }
+            
+        },2000)
+
+        return () => {window.clearInterval(timer)}
+    }, [handleControl, isClicked])
+    
+
+      
+
+    useEffect(() => {
+
+        const node = targetRef.current;
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsVisible(entry.isIntersecting);
+            observer.unobserve(entry.target)
+          },
+        )
+        
+        if (node) {
+          observer.observe(node);
         }
 
+        return () => {
+          if (node) {
+            observer.unobserve(node);
+          }
+        };
     }, [])
 
     return (
-       <div className="carousel max-w-[100vw] overflow-x-hidden">
+       <div className="carousel max-w-[100vw] overflow-x-hidden pb-3">
          <div className="slider">
-            <div className="slider__wrapper">
+            <div ref={sliderWrapper} className="slider__wrapper">
                 {children}
             </div>
 
-            <div className="outer-controls-placeholder">
-                <div className="outer" style={{ position: "relative" }}>
-                    <div className="controls-container controls-container-seen" style={{ maxWidth: 200 }}>
-                        <div className="dot dot-seen">
-                            <input onClick={() => handleControl(0)} type="radio" name="selector" value="slide1" defaultChecked />
+            <div ref={targetRef} className="outer-controls-placeholder">
+                <div className={`${isVisible? "" : "invisible"} outer`} style={{ position: "relative" }}>
+                    <div className={`${isVisible? "controls-container-seen" : "closed"} controls-container controls-container-seen`} style={{ maxWidth: 200 }}>
+                        <div className={`${isVisible? "dot-seen" : ""} dot`}>
+                            <input onClick={() => {setIsClicked(true); handleControl(0)}} type="radio" name="selector" value="slide1" defaultChecked />
                         </div>
-                        <div className="dot dot-seen">
-                            <input onClick={() => handleControl(1)} type="radio" name="selector" value="slide2" />
+                        <div className={`${isVisible? "dot-seen" : ""} dot`}>
+                            <input onClick={() => {setIsClicked(true); handleControl(1)}} type="radio" name="selector" value="slide2" />
                         </div>
-                        <div className="dot dot-seen">
-                            <input onClick={() => handleControl(2)} type="radio" name="selector" value="slide3" />
+                        <div className={`${isVisible? "dot-seen" : ""} dot`}>
+                            <input onClick={() => {setIsClicked(true); handleControl(2)}} type="radio" name="selector" value="slide3" />
                         </div>
-                        <div className="dot dot-seen">
-                            <input onClick={() => handleControl(3)} type="radio" name="selector" value="slide4" />
+                        <div className={`${isVisible? "dot-seen" : ""} dot`}>
+                            <input onClick={() => {setIsClicked(true); handleControl(3)}} type="radio" name="selector" value="slide4" />
                         </div>
-                        <div className="dot dot-seen">
-                            <input onClick={() => handleControl(4)} type="radio" name="selector" value="slide5" />
+                        <div className={`${isVisible? "dot-seen" : ""} dot`}>
+                            <input onClick={() => {setIsClicked(true); handleControl(4)}} type="radio" name="selector" value="slide5" />
                         </div>
-                        <div className="dot dot-seen">
-                            <input onClick={() => handleControl(5)} type="radio" name="selector" value="slide6" />
+                        <div className={`${isVisible? "dot-seen" : ""} dot`}>
+                            <input onClick={() => {setIsClicked(true); handleControl(5)}} type="radio" name="selector" value="slide6" />
                         </div>
                     </div>
-                    <div className="blue-thing controls blue-thing-seen"></div>
+                    <div className={`${isVisible? "blue-thing-seen" : ""} blue-thing controls`}></div>
                 </div>
             </div>
         </div>
