@@ -14,7 +14,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
 
     useEffect(() => {
         const handlePageChange = (newPage: number) => {
-            console.log( `Changing page to: ${newPage}`);
+            // console.log( `Changing page to: ${newPage}`);
             setPage(newPage);
         }
         const pages = document.querySelectorAll('.a');
@@ -23,10 +23,10 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
         });
         const handleScroll = () => {
             if (window.scrollY > 0 && window.innerWidth > 768) {
-                console.log('Scrolled down, adding selected class');
+                // console.log('Scrolled down, adding selected class');
                 document.querySelector('.wrapper')?.classList.add('selected');
                 document.querySelector('.wrapper')?.classList.add('backdrop-blur-lg');
-                console.log('Scrolled down, adding selected class');
+                // console.log('Scrolled down, adding selected class');
                 setDark(false);
             } else {
                 document.querySelector('.wrapper')?.classList.remove('selected');
@@ -48,18 +48,18 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
     }, []);
     return (        
         <nav
-        className="fixed w-screen z-20 flex flex-col"
+        className="fixed w-screen z-20 flex flex-col justify-center"
         >
-            <div className="wrapper max-md:bg-[#9dd2df8a] max-md:backdrop-blur-lg w-[98svw] mx-auto backdrop-blur-lg rounded-lg">
+            <div className="wrapper max-md:bg-[#9dd2df8a] max-md:backdrop-blur-lg md:mx-auto md:w-[98lvw] w-screen backdrop-blur-lg rounded-lg max-md:h-16">
                 <div className="flex items-center justify-between w-full h-full">
-                    <div className="flex-1 md:float-start @container flex align-middle justify-around">
+                    <div className="flex-1 md:float-start @container flex align-middle justify-between max-md:px-5">
                         <Link href="/" className="md:justify-normal flex md:pl-[8%]">
                             <Image
                                 src="/logo.png"
                                 alt="IYNA Logo"
                                 width={90}
                                 height={90}
-                                className="h-24 w-auto"
+                                className="h-24 w-auto max-md:h-14 max-md:my-auto"
                             />
                             <div className={`hidden @md:block name my-auto ${dark? "dark" : ""}`}>
                                 <div>
@@ -76,25 +76,36 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                         </Link>
                         <button style={{scale: "0.75"}} onClick={() => {
                             const links = document.querySelector('.links');
-                            if (links) links.classList.toggle('invisible');
-                            }} className="z-50 md:hidden relative menu cursor-pointer ">
+                                if (links) {
+                                    links.classList.toggle('invisible');
+                                    links.classList.toggle('text-black');
+                                    
+                                    if (links.classList.contains('invisible')) {
+                                        (document.querySelector("#reverse") as SVGAnimateElement | null)?.beginElement()
+                                    }
+                                    else {
+                                        (document.querySelector("#start") as SVGAnimateElement | null)?.beginElement()
+                                    }
+                                }
+                            
+                            }} className="z-50 md:hidden relative menu cursor-pointer my-auto">
                             <svg className="block w-16 hover:stroke-sky-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#000" strokeWidth=".6" fill="rgba(0,0,0,0)" strokeLinecap="round" style={{cursor: "pointer"}}>
                                 <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
                                     <animate dur="0.1s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
                                     <animate dur="0.1s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
                                 </path>
                                 <rect width="5" height="5" stroke="none">
-                                    <animate dur="1s" id="reverse" attributeName="width" begin="click" />
+                                    <animate dur="1s" id="reverse" attributeName="width" begin="" />
                                 </rect>
                                 <rect width="5" height="5" stroke="none">
-                                    <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                                    <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="" />
                                     <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
                                 </rect>
                             </svg>
                         </button>
                     </div>
 
-                    <div className={`${dark? "dark" : ""} md:pt-0 md:pb-0 max-md:-left-5 max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] invisible md:visible md:bg-transparent h-screen justify-around py-[20svh] items-center w-[110dvw] flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12`}>
+                    <div className={`${dark? "dark" : ""} md:pt-0 w-[100dvw] md:pb-0  max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] invisible md:visible md:bg-transparent h-screen justify-around py-[20svh] items-center  flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12`}>
                         <Link
                         href="/"
                         className={`${selectedPage == 0? "selected": ""} text-xl md:text-lg a`}

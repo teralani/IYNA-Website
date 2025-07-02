@@ -34,16 +34,39 @@ body {
 * {
   box-sizing: border-box;
 }
-
-nav {
+@media (width > 768) {
+  .wrapper {
+    height: calc(var(--spacing) * 30);
+  }
   .dark {
     color: white;
   }
+  .links {
+    a.dark::after {
+      background-color: white;
+    }
+    a:hover::after, .selected::after {
+      transform: scaleX(1);
+    }
+  }
+  nav:has(.popup:hover) .wrapper, .wrapper:has(.a:hover), .wrapper.selected {
+    background-color: var(--color-light-blue);
+    height: calc(var(--spacing) * 25);
+    margin-top: calc(var(--spacing) * 6.5);
+    color:var(--foreground);
+    button {
+      border: 1px var(--foreground);
+    }
+  }
+}
+
+nav {
+
   color: var(--foreground);
   .wrapper{
     /* background-color: transparent; */
+    
     transition: height 0.5s ease, margin-top 0.5s ease, background-color 0.5s 100ms ease;
-    height: calc(var(--spacing) * 30);
     margin-top: calc(var(--spacing) * 4);
     .name div{
       overflow: hidden;
@@ -130,12 +153,7 @@ nav {
       transition: transform 0.15s ease-out;
       transform-origin: bottom left;
     }
-    a.dark::after {
-      background-color: white;
-    }
-    a:hover::after, .selected::after {
-      transform: scaleX(1);
-    }
+
   }
   .dark.links {
     a::after {
@@ -191,15 +209,6 @@ nav {
 
 }
 
-nav:has(.popup:hover) .wrapper, .wrapper:has(.a:hover), .wrapper.selected {
-    background-color: var(--color-light-blue);
-    height: calc(var(--spacing) * 25);
-    margin-top: calc(var(--spacing) * 6.5);
-    color:var(--foreground);
-    button {
-      border: 1px var(--foreground);
-    }
-}
 
   nav:has(.popup:hover) .wrapper, .wrapper:has(.a:hover){
   .name div{
@@ -309,23 +318,23 @@ nav:has(.popup:hover) .wrapper, .wrapper:has(.a:hover), .wrapper.selected {
 
 .hero {
   h1 {
-    animation: fadeIn 0.5s ease-in-out forwards;
+    animation: fadein 0.5s ease-in-out forwards;
     opacity: 0;
   }
   p {
-    animation: fadeIn 0.5s ease-in-out forwards;
+    animation: fadein 0.5s ease-in-out forwards;
     animation-delay: 0.25s;
     opacity: 0;
   }
   a {
-    animation: fadeIn 0.5s ease-in-out forwards;
+    animation: fadein 0.5s ease-in-out forwards;
     animation-delay: 0.45s;
     opacity: 0;
   }
 
 }
 
-@keyframes fadeIn {
+@keyframes fadein {
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -335,4 +344,371 @@ nav:has(.popup:hover) .wrapper, .wrapper:has(.a:hover), .wrapper.selected {
     transform: translateY(0);
   }
   
+}
+/* .carousel::before {
+  content: "";
+  position: absolute;
+  left: -10%;
+  background: linear-gradient(to left, #00000000 0%, var(--color-lavender) 40%);
+  width: 60%;
+  height: 39%;
+  z-index: 50;
+}
+.carousel::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 115%;
+  background: linear-gradient(to right, #00000000 0%, var(--color-lavender) 40%);
+  width: 60%;
+  height: 39%;
+  z-index: 50;
+} */
+
+
+.carousel {
+  
+.controls-container {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color:rgba(81, 81, 87, 0.60);
+    backdrop-filter: blur(10px);
+
+    /* animation: onOpen 0.5s cubic-bezier(.47,.23,.32,1.5), expand 1.3s ease-out 1.4s;
+    animation-fill-mode: forwards;
+    transform-origin:25px 100px; */
+
+    display:flex;
+    overflow: clip;
+    /* justify-items: center; */
+    justify-content: space-evenly;
+    /* align-content: center; */
+    align-items: center;
+    column-gap: auto;
+    padding-inline:10px;
+
+}
+.controls-container-two-button {
+    max-width: 100px;
+    display:column;
+}
+.controls-container-seen {
+    animation: onOpen 0.5s cubic-bezier(.47,.23,.32,1.5), expand 1.3s ease-out 1.4s;
+    animation-fill-mode: forwards;
+    transform-origin:25px 100px;
+
+}
+.blue-thing {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color:rgba(209, 209, 209, 0);
+    z-index: -1;
+
+    /* animation: onOpen 0.5s cubic-bezier(.47,.23,.16,1.4), scaleUp 1.3s cubic-bezier(.37,-0.05,.31,1.28) 0.3s, controls 1.3 ease-out 10s;
+    transform-origin:25px 100px;
+    animation-fill-mode:forwards; */
+}
+.blue-thing-seen {
+    animation: onOpen 0.5s cubic-bezier(.47,.23,.16,1.4), scaleUp 1.3s cubic-bezier(.37,-0.05,.31,1.28) 0.3s, controls 1.3 ease-out 10s;
+    transform-origin:25px 100px;
+    animation-fill-mode:both;
+}
+.dot {
+    transition: flex-basis 0.3s ease;
+    /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
+    /* animation-fill-mode: both; */
+    flex-basis:7px;
+
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+    background-color: white;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+}
+
+.dot-two-button {
+    /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
+    /* animation-fill-mode: both; */
+    flex-basis:content;
+    flex:none;
+
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: white;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+}
+.dot-seen {
+    opacity:1;
+
+    animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4);
+    animation-fill-mode: both;
+}
+.dot-two-button-highlight.dot-seen {
+    animation-delay: calc(0.1s + 1.3s);
+}
+h2.dot-seen {
+    animation-delay: 1.8s;
+}
+.dot:nth-child(1) {
+    animation-delay: calc(0.2s + 1.3s);
+    z-index:10;
+}
+.dot:nth-child(2) {
+    animation-delay: calc(0.4s + 1.3s);
+    z-index:11;
+}
+.dot:nth-child(3) {
+    animation-delay: calc(0.6s + 1.3s);
+    z-index:12;
+}
+.dot:nth-child(4) {
+    animation-delay: calc(0.8s + 1.3s);
+    z-index:13;
+}
+.dot:nth-child(5) {
+    animation-delay: calc(1.0s + 1.3s);
+    z-index:14;
+}
+.dot:nth-child(6) {
+    animation-delay: calc(1.2s + 1.3s);
+    z-index:15;
+}
+.dot:nth-child(7) {
+    animation-delay: calc(1.4s + 1.3s);
+    z-index:15;
+}
+.dot:nth-child(8) {
+    animation-delay: calc(1.5s + 1.3s);
+    z-index:15;
+}
+.dot:hover {
+    background-color: rgb(209, 209, 209);
+}
+.dot:has(input:checked) {
+    
+    flex-basis: 2.5em;
+}
+
+.dot-two-button:has(input:checked) {
+    flex-basis: auto;
+}
+
+.dot input {
+    flex-basis: 0em;
+    position: absolute;
+    opacity: 0;
+    height: auto;
+    width:auto;
+}
+.dot input:not(:checked) {
+    cursor: pointer;
+}
+.dot input:checked {
+    cursor:default;
+}
+
+.outer {
+    /* position:sticky; */
+    /* position:fixed;
+    bottom:1vh; */
+    position:fixed;
+    bottom:1vh;
+    justify-self: center;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    /* padding-bottom: 2%; */
+
+    width:100vw;
+    /* border: 2px solid white; */
+    
+    z-index: 100000000000000000000000000;
+    opacity:1;
+    transition: opacity 0.3s linear 2s;
+}
+.outer-controls-placeholder {
+    margin-top: 2%;
+    position:relative;
+    justify-self: left;
+
+    justify-items: center;
+
+    height: 50px;
+    width:100vw;
+}
+
+.invisible {
+    animation: fadeOut 1s linear 2s;
+    animation-fill-mode: forwards;
+}
+
+.closed {
+    animation: closed 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.dot-two-button-highlight {
+    transition: width 0.5s, height 0.5s, border-radius 0.5s, opacity 0.25s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
+    /* animation-fill-mode: both; */
+
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+
+    /* position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* opacity: 0 !important; */
+    position:relative;
+    align-self: center;
+    justify-self: center;
+
+    display: flex;
+    z-index: -3;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.dot-two-button-highlight.selected{
+    /* transition: width 5s, height 5s, border radius 5s, opacity 5s; */
+    border:3px solid rgb(32, 145, 216);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+
+    /* opacity: 1; */
+}
+.dot-two-button-highlight.selected > .dot-two-button {
+    border: 2px rgba(81, 81, 87, 0.75) solid;
+}
+.slider {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width:100vw;
+    height:fit-content;
+
+    position: relative;
+    list-style-type: none;
+    align-self: center;
+}
+
+.slider__inner {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: clamp( 0px, 500vw, 8195.5px);
+    height: 50vh;
+
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    /* scroll-snap-align: center;
+    scroll-snap-stop: always;
+    scroll-snap-type: x mandatory; */
+
+    /* border: 2px solid red; */
+    /* padding-inline: 1vw; */
+    margin-left: 22.4%;
+
+    transition: left 0.6s;
+}
+.two-button-slider__inner{
+    width:100%;
+    padding-inline: 22vw;
+    left:0;
+    justify-self: center;
+    justify-content: center;
+    margin-left: 0;
+}
+.slider .dot:checked:nth-of-type(2) ~ .slider__inner{
+    left: 100px;
+}
+
+.slider__wrapper{
+    height:auto;
+    position:relative;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: clip;
+    
+    display: flex;
+
+    scroll-snap-stop: always;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+
+    padding-inline: calc(50vw - var(--spacing)*50);
+}
+
+
+}
+
+@keyframes onOpen{
+    0% {
+        transform:scale3d(0,0,0) translate(0,-30px);
+    }
+    70%{
+        transform:scale3d(1, 1, 1);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes scaleUp{
+    0%{scale: 1.0; transform-origin: center; background-color:rgb(26, 82, 236);}
+    50% {scale: 1.7; transform-origin: center; background-color:rgba(26, 82, 236, .9);}
+    99% {scale: 1; transform-origin: center; background-color:rgba(26, 82, 236, 0.2);}
+    100% {background-color:rgba(209, 209, 209, 0);}
+}
+@keyframes expand {
+    from {width: 50px}
+    to {
+        width: 40vw;
+    }
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeOut {
+    0% {visibility: visible;}
+    100% {visibility: hidden;}
+}
+@keyframes closed {
+    0% {
+        width: 200px; scale:1;
+    }
+    90% {width: 50px; scale:1}
+
+    100% {scale:0;}
 }

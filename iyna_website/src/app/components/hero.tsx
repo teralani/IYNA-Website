@@ -11,7 +11,7 @@ export default function Hero() {
             /> */}
             <div className="max-lg:backdrop-blur-md w-full h-screen absolute">
             </div>
-            <svg className="brain-svg lg:h-max" width="1350.000000pt" height="1038.000000pt" viewBox="0 0 1350.000000 1038.000000" preserveAspectRatio="xMidYMid meet">
+            <svg className="brain-svg lg:h-max opacity-[0.5]" width="1350.000000pt" height="1038.000000pt" viewBox="0 0 1350.000000 1038.000000" preserveAspectRatio="xMidYMid meet">
                     <defs>
                         <linearGradient id="myLinearGradient" x1="-5%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#E6E6FA" />
@@ -58,10 +58,10 @@ export default function Hero() {
                     -17 170 -10 13 -18 30 -18 37 0 40 -115 166 -183 199 -129 64 -310 83 -452 48z"/>
                     </g>
                  </svg>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[var(--foreground)]">
-                <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">International Youth Neuroscience Association</h1>
-                <p className="text-lg md:text-xl mb-8 text-white">Lake Washington School District Chapter</p>
-                <a href="/aboutus" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[var(--foreground)]">
+                <h1 className="text-3xl md:text-6xl font-bold mb-4 text-white">International Youth Neuroscience Association</h1>
+                <p className="text-sm md:text-xl mb-8 text-white">Lake Washington School District Chapter</p>
+                <a href="/aboutus" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full max-md:text-xs">
                     Learn More
                 </a>
             </div>
