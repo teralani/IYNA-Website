@@ -79,8 +79,9 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 if (links) {
                                     links.classList.toggle('invisible');
                                     links.classList.toggle('text-black');
+                                    links.classList.toggle('max-md:-translate-x-full');
                                     
-                                    if (links.classList.contains('invisible')) {
+                                    if (links.classList.contains('max-md:-translate-x-full')) {
                                         (document.querySelector("#reverse") as SVGAnimateElement | null)?.beginElement()
                                     }
                                     else {
@@ -105,7 +106,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                         </button>
                     </div>
 
-                    <div className={`${dark? "dark" : ""} md:pt-0 w-[100dvw] md:pb-0  max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] invisible md:visible md:bg-transparent h-screen justify-around py-[20svh] items-center  flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12`}>
+                    <div className={`${dark? "dark" : ""}  invisible md:visible max-md:-translate-x-full transition-transform md:pt-0 w-[100dvw] md:pb-0 max-md:-top-5 fixed backdrop-blur-md md:backdrop-blur-none  md:blur-none  bg-[#d7dbdff6] md:bg-transparent h-screen justify-around py-[20svh] items-center  flex-col md:flex-row md:h-auto md:relative links flex-1 flex md:justify-center md:space-x-12`}>
                         <Link
                         href="/"
                         className={`${selectedPage == 0? "selected": ""} text-xl md:text-lg a`}

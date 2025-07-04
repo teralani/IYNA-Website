@@ -7,11 +7,11 @@ export default function TeamPage() {
         <div>
             <Navbar selectedPage={3} />
             <div className="pt-60 flex flex-col items-center justify-center">
-                <h1 className="text-4xl font-bold mb-4">Meet Our Team</h1>
-                <p className="text-lg">Learn more about the dedicated individuals behind the IYNA.</p>
+                <h1 className="max-md:px-6 text-4xl font-bold mb-4">Meet Our Team</h1>
+                <p className="max-md:px-6 text-lg">Learn more about the dedicated individuals behind the IYNA.</p>
                 <div className="mt-8">
                     {/* Team member profiles can be added here */}
-                    <p className="mt-4 text-center max-w-2xl">
+                    <p className="max-md:px-6 mt-4 text-center max-w-2xl">
                         The LWSD Chapter of IYNA is run by a group of passionate individuals who are dedicated to promoting neuroscience education and outreach. To learn more about each of our team members, click on their profiles below. We are always looking for new members to join our team and help us in our mission to promote neuroscience education and outreach. If you are interested in joining us, please reach out to us by our email, or by clicking the New Members form below!
                     </p>
                 </div>

@@ -4,12 +4,19 @@ import { ReactNode } from "react";
 
 export default function Carousel({ children }: { children: ReactNode }) {
     const targetRef = useRef(null);
-    const sliderWrapper = useRef(null)
+    const sliderWrapper = useRef<HTMLDivElement>(null)
     const [isVisible, setIsVisible] = useState(false);
     const [isClicked, setIsClicked] = useState(false)
 
     const handleControl = React.useCallback((cardNum: number) => {
         const s = sliderWrapper.current
+
+        if (s && s.children && s.children[0]) {
+            const paddingInline = parseFloat(s.style.paddingInline || "0");
+            console.log(s.style.paddingInline)
+            console.log((s.children[0] as HTMLElement).clientWidth + paddingInline);
+        }
+
         const o = 378;
         if (s) {
             (s as HTMLElement).scroll(o * cardNum, 0);
@@ -25,7 +32,6 @@ export default function Carousel({ children }: { children: ReactNode }) {
                     handleControl(i);
                     if (targetRef.current) {
                         const inputs = (targetRef.current as Element).querySelectorAll("input");
-                        console.log(inputs);
                         inputs[i === 0 ? 5 : i - 1].checked = false;
                         inputs[i].checked = true;
                     }
@@ -39,7 +45,7 @@ export default function Carousel({ children }: { children: ReactNode }) {
                 }
             }
             
-        },2000)
+        },4000)
 
         return () => {window.clearInterval(timer)}
     }, [handleControl, isClicked])
@@ -48,12 +54,14 @@ export default function Carousel({ children }: { children: ReactNode }) {
       
 
     useEffect(() => {
-
         const node = targetRef.current;
         const observer = new IntersectionObserver(([entry]) => {
-            setIsVisible(entry.isIntersecting);
-            observer.unobserve(entry.target)
-          },
+            if (entry.isIntersecting) {
+                setIsVisible(entry.isIntersecting);
+                console.log(isVisible)
+                observer.unobserve(entry.target)
+            }
+          }, {threshold: 0.5}
         )
         
         if (node) {
@@ -61,8 +69,8 @@ export default function Carousel({ children }: { children: ReactNode }) {
         }
 
         return () => {
-          if (node) {
-            observer.unobserve(node);
+          if (observer) {
+            observer.disconnect();
           }
         };
     }, [])
