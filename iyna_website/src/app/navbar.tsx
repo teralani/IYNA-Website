@@ -25,6 +25,13 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
         popup?.addEventListener('mouseleave', () => handlePageChange(-1))
 
         const handleScroll = () => {
+            if (window.scrollY > 0 && window.innerWidth <= 768) {
+                document.querySelector('.scroll')?.classList.remove('animate-fade-out');
+                document.querySelector('.scroll')?.classList.add('animate-fade');
+            } else {
+                document.querySelector('.scroll')?.classList.add('animate-fade-out');
+                document.querySelector('.scroll')?.classList.remove('animate-fade');
+            }
             if (window.scrollY > 0 && window.innerWidth > 768) {
                 // console.log('Scrolled down, adding selected class');
                 document.querySelector('.wrapper')?.classList.add('selected');
@@ -53,6 +60,11 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
         <nav
         className="fixed w-screen z-20 flex flex-col justify-center"
         >
+            <div className="md:hidden fixed w-15 h-15 right-[5dvw] bottom-[5dvw] origin-bottom-right">
+                <div className="scroll flex flex-col justify-center bg-[#6d9bc260] backdrop-blur-lg rounded-full w-full h-full cursor-pointer border-1 border-faded-blue" onClick={() => window.scrollTo({top: 0, left: 0, behavior: "smooth",})}>
+                    <svg stroke="gray" fill="white" className="mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/></svg>
+                </div>
+            </div>
             <div className="wrapper max-md:bg-[#9dd2df8a] max-md:backdrop-blur-lg md:mx-auto md:w-[98lvw] w-screen backdrop-blur-lg rounded-lg max-md:h-16">
                 <div className="flex items-center justify-between w-full h-full">
                     <div className="flex-1 md:float-start @container flex align-middle justify-between max-md:px-5">
@@ -64,7 +76,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 height={90}
                                 className="h-24 w-auto max-md:h-14 max-md:my-auto"
                             />
-                            <div className={`hidden @md:block name my-auto ${dark? "dark" : ""}`}>
+                            <div className={` @md:block name my-auto ${dark? "dark" : ""}`}>
                                 <div>
                                     <p className="text-3xl my-auto">
                                         LWSD Chapter

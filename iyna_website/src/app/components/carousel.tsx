@@ -17,7 +17,8 @@ export default function Carousel({ children }: { children: ReactNode }) {
         //     console.log((s.children[0] as HTMLElement).clientWidth + paddingInline);
         // }
 
-        const o = 378;
+        // const o = 378;
+        const o = 385;
         if (s) {
             (s as HTMLElement).scroll(o * cardNum, 0);
         }

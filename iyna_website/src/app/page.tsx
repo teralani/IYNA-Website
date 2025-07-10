@@ -52,7 +52,7 @@ export default async function Home() {
     <Navbar selectedPage={0} darken={true}/>
     <Hero />
     <div className="bg-lavender py-30">
-      <h1 className="text-center text-5xl mb-12 font-bold">Recent Events</h1>
+      <h1 className="text-center text-4xl md:text-5xl mb-6 md:mb-12 font-bold">Recent Events</h1>
       <Carousel>
        {displayed_events}
       </Carousel>
