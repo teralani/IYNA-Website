@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IYNA - LWSD Chapter",
+  title: "IYNA | LWSD Chapter",
   description: "...",
 };
 

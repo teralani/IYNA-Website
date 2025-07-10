@@ -3,24 +3,58 @@ import Card from "./components/card";
 import Carousel from "./components/carousel";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
+import { PriorityQueue } from "./heap";
 import Navbar from "./navbar";
+import fs from 'fs/promises';
 
 
 
-export default function Home() {
+export default async function Home() {
+  const file = await fs.readFile(process.cwd() + '/src/app/content.json', 'utf8');
+  const data = JSON.parse(file)
+  const recent_events = new PriorityQueue<React.ReactNode>()
+  const today = new Date()
+  let i = 0
+
+  const folders = ["workshops", "webinars", "fundraisers", "labs", "competitions", "misc"]
+  
+  for (const folder of folders) {
+    for (const w of data.events[folder]) {  
+      const tempDate = new Date(w.date)
+      if (tempDate < today ) {
+          const el = (
+              <Card
+                  title={w.title}
+                  description={w.description}
+                  imageSrc={w.image_url}
+                  buttonText={"Register Now"}
+                  buttonLink={w.registration_link}
+                  number={i}
+                  key={i}
+                  disable={true}
+                  buttonHidden={true}
+              />
+          )
+          recent_events.push(el, tempDate.getTime() - today.getTime())
+        }
+        i++
+    }
+  }
+
+  const displayed_events = []
+  for (let i = 0; i < 6; i++) {
+    displayed_events.push(recent_events.pop())
+  }
+
+
   return (
   <div className="">
     <Navbar selectedPage={0} darken={true}/>
     <Hero />
     <div className="bg-lavender py-30">
-      <h1 className="text-center text-5xl mb-12 font-bold">Past Events</h1>
+      <h1 className="text-center text-5xl mb-12 font-bold">Recent Events</h1>
       <Carousel>
-        <Card buttonLink="/events" title={"Webinar with Dr. Chudler"} description={"Known for his Emmy-winning projects BrainWorks and Neuroscience for Kids, Dr. Chudler will share insights to inspire high school students passionate about neuroscience."} imageSrc={"/webinar.jpg"} buttonText={"Learn More"}/>
-        <Card buttonLink="/events" title={"Brain Disection"} description={"This hands-on experience offers an amazing opportunity to dive deep into the anatomy and function of the brain and its vital role in human health."} imageSrc={"/braindisection.jpg"} buttonText={"Learn More"}/>
-        <Card buttonLink="/events" title={"Apophenia Workshop"} description={" In this session, we will delve into the intriguing phenomena of pareidolia and apophenia—what they are, why they occur, and their connection to psychological conditions. "} imageSrc={"/apophenia.jpg"} buttonText={"Learn More"}/>
-        <Card buttonLink="/events" title={"Krispy Kreme Fundraiser"} description={"We are running a Digital Dozens fundraiser with Krispy Kreme to help support IYNA!"} imageSrc={"/donuts.jpg"} buttonText={"Learn More"}/>
-        <Card buttonLink="/events" title={"IYNA Brain Quiz"} description={"The Regional Brain Quiz is your chance to test your knowledge, compete with fellow students, and take the first stpe toward the National Brain Bee."} imageSrc={"/quiz.jpg"} buttonText={"Learn More"}/>
-        <Card buttonLink="/events" title={"Card Making Event"} description={"The IYNA EHS Chapter is partnering with the EHS Junior Orthopedic Guild Club to host a card-making event where we will be creating heartfelt cards for hospital patients!"} imageSrc={"/cards.jpg"} buttonText={"Learn More"}/>
+       {displayed_events}
       </Carousel>
     </div>
     <Footer></Footer>

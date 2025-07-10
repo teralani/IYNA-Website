@@ -1,0 +1,115 @@
+{
+    "events": {
+        "workshops" : [
+            {
+                "title": "Apophenia Workshop",
+                "description": "In this session, we will delve into the intriguing phenomena of pareidolia and apophenia—what they are, why they occur, and their connection to psychological conditions.",
+                "date": "2025-02-19",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/apophenia.jpg"
+            },
+            {
+                "title": "Summer Session #1",
+                "description": "Explore topics from neurological illness to brain anatomy in our neuroscience summer workshops! This workshop series is designed for ages 11 through 15 years old.",
+                "date": "",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/"
+            },
+            {
+                "title": "Summer Session #2",
+                "description": "Explore topics from neurological illness to brain anatomy in our neuroscience summer workshops! This workshop series is designed for ages 11 through 15 years old.",
+                "date": "",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/"
+            },
+            {
+                "title": "Summer Session #3",
+                "description": "Explore topics from neurological illness to brain anatomy in our neuroscience summer workshops! This workshop series is designed for ages 11 through 15 years old.",
+                "date": "",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/"
+            },
+            {
+                "title": "Summer Session #4",
+                "description": "Explore topics from neurological illness to brain anatomy in our neuroscience summer workshops! This workshop series is designed for ages 11 through 15 years old.",
+                "date": "",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/"
+            }
+        ],
+        "webinars" : [
+            {
+                "title": "Webinar with Dr. Chudler",
+                "description": "Known for his Emmy-winning projects BrainWorks and Neuroscience for Kids, Dr. Chudler will share insights to inspire high school students passionate about neuroscience.",
+                "date": "2024-10-26",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/chudler-webinar.jpg"
+            }
+        ],
+        "fundraisers" : [
+            {
+                "title": "Krispy Kreme Fundraiser",
+                "description": "We are running a Digital Dozens fundraiser with Krispy Kreme to help support IYNA!",
+                "date": "2025-02-27",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/donuts.jpg"
+            },
+            {
+                "title": "Support IYNA GoFundMe",
+                "description": "Support local neuroscience education by donating to our GoFundMe. 100 percent of proceeds go towards IYNA LWSD Chapter and to hosting events and programs for our community.",
+                "date": "",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "https://gofund.me/22d729a3",
+                "image_url": "/gofundme.jpg"
+            }
+        ],
+        "labs" : [
+            {
+                "title": "Brain Disection",
+                "description": "This hands-on experience offers an amazing opportunity to dive deep into the anatomy and function of the brain and its vital role in human health.",
+                "date": "2025-02-19",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/braindisection.jpg"
+            }
+        ],
+        "competitions" : [
+            {
+                "title": "IYNA Brain Quiz",
+                "description": "The Regional Brain Quiz is your chance to test your knowledge, compete with fellow students, and take the first stpe toward the National Brain Bee.",
+                "date": "2025-04-19",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/quiz.jpg"
+            }
+        ],
+        "misc" : [
+            {
+                "title": "Card Making Event",
+                "description": "The IYNA EHS Chapter is partnering with the EHS Junior Orthopedic Guild Club to host a card-making event where we will be creating heartfelt cards for hospital patients!",
+                "date": "2025-04-3",
+                "time": "",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/cards.jpg"
+            }
+        ]
+    }
+}

@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import Footer from "../components/footer";
 import Navbar from "../navbar";
 import Profile from "./profile";
+
+export const metadata: Metadata = {
+  title: "Our Team | IYNA",
+  description: "...",
+};
 
 export default function TeamPage() {
     return (

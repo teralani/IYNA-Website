@@ -21,6 +21,9 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
         pages.forEach((page, index) => {
             page.addEventListener('mouseover', () => handlePageChange(index));
         });
+        const popup = document.querySelector(".popup")
+        popup?.addEventListener('mouseleave', () => handlePageChange(-1))
+
         const handleScroll = () => {
             if (window.scrollY > 0 && window.innerWidth > 768) {
                 // console.log('Scrolled down, adding selected class');
@@ -149,7 +152,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                         <ul>
                             <p>EVENTS</p>
                             <li><Link
-                                href={"/events#workshops"}
+                                href={"/events/workshops"}
                                 scroll={true}
                             >Workshops</Link></li>
                             <li><Link
@@ -157,7 +160,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 scroll={true}
                             >Webinars</Link></li>
                             <li><Link
-                                href={"/events#Competitions"}
+                                href={"/events/competitions"}
                                 scroll={true}
                             >Competitions</Link></li>
                             <li><Link
@@ -176,7 +179,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 scroll={true}
                             >Volunteer</Link></li>
                             <li><Link
-                                href={"/events#Fundraisers"}
+                                href={"/events/fundraisers"}
                                 scroll={true}
                             >Fundraisers</Link></li>
                         </ul>

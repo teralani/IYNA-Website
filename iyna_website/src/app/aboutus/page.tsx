@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import Navbar from '../navbar';
 import Footer from '../components/footer';
+import { Metadata } from 'next';
 
+
+export const metadata: Metadata = {
+  title: "About Us | IYNA",
+  description: "...",
+};
 
 export default function AboutUsPage() {
 

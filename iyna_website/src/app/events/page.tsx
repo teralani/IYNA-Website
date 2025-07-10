@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import Card from "../components/card";
 import Footer from "../components/footer";
 import Navbar from "../navbar";
+
+export const metadata: Metadata = {
+  title: "Events | IYNA",
+  description: "...",
+};
+
 
 export default function EventsPage() {
   return (
@@ -17,6 +24,7 @@ export default function EventsPage() {
                     description="Join us for our annual summer neuroscience workshop, where you can learn about neuroscience topics and participate in hands-on activities."
                     imageSrc="/workshop.jpg"
                     buttonText="Learn More"
+                    buttonLink="/events/workshops"
                     number={1}
                 />
                 <Card 
@@ -31,9 +39,9 @@ export default function EventsPage() {
                     title="Competitions"
                     description="Compete in our neuroscience competitions and win exciting prizes! Our competitions are designed to prepare you for other competitions like the Brain Bee."
                     imageSrc="/workshop.jpg"
-                    buttonText="Register Now"
+                    buttonText="Learn More"
                     number={3}
-                    disable={true}
+                    buttonLink="/events/competitions"
                 />
                 <Card 
                     title="Labs"
@@ -63,6 +71,7 @@ export default function EventsPage() {
                     description="Help us raise funds for our events and activities! Your support is crucial in helping us achieve our mission of promoting neuroscience education."
                     imageSrc="/workshop.jpg"
                     buttonText="Learn More"
+                    buttonLink="/events/fundraisers"
                     number={7}
                 />
             </div>

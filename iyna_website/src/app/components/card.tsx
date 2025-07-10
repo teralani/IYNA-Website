@@ -11,9 +11,10 @@ type CardProps = {
     number?: number;
     buttonLink?: string;
     disable?: boolean;
+    buttonHidden? :boolean
 };
 
-export default function Card({title, description, imageSrc, buttonText, number = 0,  buttonLink, disable = false}: CardProps) {
+export default function Card({title, description, imageSrc, buttonText, buttonLink, number = 0, disable = false, buttonHidden = false}: CardProps) {
     const [imageError, setImageError] = useState(false);    
     useEffect(() => {
         // This code runs after the component has mounted
@@ -38,7 +39,7 @@ export default function Card({title, description, imageSrc, buttonText, number =
                 <div className='slide-up'><p style={{animationDelay : `${number * 50}ms`}} className="text-xl font-bold mb-2">{title}</p></div>
                 <p className="text-gray-700 rounded-slg">{description}</p>
             </div>
-            <button disabled={disable} className={`${disable? "disabled" : ""} justify-self-center mb-5 mt-auto`}>
+            <button disabled={disable} className={`${disable? "disabled" : ""} ${buttonHidden? "hidden" : ""} justify-self-center mb-5 mt-auto`}>
                 <Link
                     href={buttonLink || "#"}
                     aria-disabled={disable}
