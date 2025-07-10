@@ -8,7 +8,7 @@ export default async function Competitions() {
     const data = JSON.parse(file)
     const curr_workshops = []
     const past_workshops = []
- 
+  
     let i = 0
     for (const w of data.events.competitions) {
         if (new Date(w.date) < new Date() ) {
