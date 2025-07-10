@@ -11,11 +11,11 @@ export default function Carousel({ children }: { children: ReactNode }) {
     const handleControl = React.useCallback((cardNum: number) => {
         const s = sliderWrapper.current
 
-        if (s && s.children && s.children[0]) {
-            const paddingInline = parseFloat(s.style.paddingInline || "0");
-            console.log(s.style.paddingInline)
-            console.log((s.children[0] as HTMLElement).clientWidth + paddingInline);
-        }
+        // if (s && s.children && s.children[0]) {
+        //     const paddingInline = parseFloat(s.style.paddingInline || "0");
+        //     console.log(s.style.paddingInline)
+        //     console.log((s.children[0] as HTMLElement).clientWidth + paddingInline);
+        // }
 
         const o = 378;
         if (s) {

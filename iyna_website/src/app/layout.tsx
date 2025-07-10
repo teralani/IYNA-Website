@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="google-site-verification" content="nGbiNVtNYvkuOXzdR2gQB_CV067PZdhAhkoBnoeHQ9s" />
+      <meta name="google-site-verification" content="3_khQPVDURqDy_eUO7kDkXJ2TTlfvPJ2v2JGg3N4kss" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
