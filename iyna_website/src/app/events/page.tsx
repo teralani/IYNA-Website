@@ -13,7 +13,7 @@ export default function EventsPage() {
   return (
     <div>
         <Navbar selectedPage={2}/>
-        <div className="flex flex-col items-center justify-center pt-30">
+        <div className="flex flex-col items-center justify-center pt-44">
             <h1 className="text-4xl font-bold mb-4">Events</h1>
             <p className="text-lg">Stay tuned for upcoming events!</p>
         </div>

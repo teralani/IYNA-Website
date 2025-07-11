@@ -12,7 +12,7 @@ export default function TeamPage() {
     return (
         <div>
             <Navbar selectedPage={3} />
-            <div className="pt-30 flex flex-col items-center justify-center">
+            <div className="pt-44 flex flex-col items-center justify-center">
                 <h1 className="max-md:px-6 text-4xl font-bold mb-4">Meet Our Team</h1>
                 <p className="max-md:px-6 text-lg">Learn more about the dedicated individuals behind the IYNA.</p>
                 <div className="mt-8">
@@ -40,7 +40,7 @@ export default function TeamPage() {
                         bio=" "
                     />
                     <Profile
-                        name="Ananya Raihura"
+                        name="Ananya Raichura"
                         position="Public Relations"
                         bio=" "
                     />
