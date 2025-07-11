@@ -59,9 +59,9 @@ export default function Hero() {
                     </g>
                  </svg>
             <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[var(--foreground)]">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">International Youth Neuroscience Association</h1>
-                <p className="text-lg md:text-xl mb-8 text-white">Lake Washington School District Chapter</p>
-                <a href="/aboutus" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full max-md:text-sm">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white md:mx-auto md:max-w-[80%]">Discover your passion for neuroscience.</h1>
+                <p className="text-lg md:text-2xl mb-8 text-lavender text-center md:mx-auto md:max-w-[80%]">Connect and learn more about the neuroscience community as a part of the LWSD Chapter of IYNA. Discover how joining IYNA can inspire you, today!</p>
+                <a href="/aboutus" className="text-lg bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full max-md:text-md">
                     Learn More
                 </a>
             </div>

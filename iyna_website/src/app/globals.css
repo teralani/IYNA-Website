@@ -18,8 +18,8 @@
   --color-purple: #6c638c;
 
   --animate-fade: fade 0.5s ease-in-out forwards;
-  --animate-fade-out: fadeO 0.5s ease-in-out forwards;
-  --animate-fadeIn: fadein 0.5s ease-in-out forwards
+  --animate-fade-out: fadeO 0.25s ease-in-out forwards;
+  --animate-fadeIn: fadein 0.25s ease-in-out forwards
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -662,7 +662,7 @@ h2.dot-seen {
     height:auto;
     position:relative;
     width: 100vw;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: clip;
     
     display: flex;
@@ -672,8 +672,13 @@ h2.dot-seen {
     scroll-behavior: smooth;
 
     padding-inline: calc(50vw - var(--spacing)*50);
-}
 
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; 
+}
+.slider__wrapper::-webkit-scrollbar {
+  display: none;
+}
 
 }
 

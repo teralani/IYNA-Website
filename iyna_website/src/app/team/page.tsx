@@ -12,7 +12,7 @@ export default function TeamPage() {
     return (
         <div>
             <Navbar selectedPage={3} />
-            <div className="pt-60 flex flex-col items-center justify-center">
+            <div className="pt-30 flex flex-col items-center justify-center">
                 <h1 className="max-md:px-6 text-4xl font-bold mb-4">Meet Our Team</h1>
                 <p className="max-md:px-6 text-lg">Learn more about the dedicated individuals behind the IYNA.</p>
                 <div className="mt-8">
@@ -27,32 +27,32 @@ export default function TeamPage() {
                     <Profile
                         name="Haarika Nidadavolu"
                         position="President"
-                        bio="John is a neuroscience enthusiast with a passion for education and outreach. He has been involved in various neuroscience initiatives and is dedicated to promoting awareness about the brain."
+                        bio=" "
                     />
                     <Profile
                         name="Advaith Shyam"
                         position="Vice President"
-                        bio="John is a neuroscience enthusiast with a passion for education and outreach. He has been involved in various neuroscience initiatives and is dedicated to promoting awareness about the brain."
+                        bio=" "
                     />
                     <Profile
                         name="Aniketh Terala"
                         position="Events Coordinator"
-                        bio="John is a neuroscience enthusiast with a passion for education and outreach. He has been involved in various neuroscience initiatives and is dedicated to promoting awareness about the brain."
+                        bio=" "
                     />
                     <Profile
                         name="Ananya Raihura"
                         position="Public Relations"
-                        bio="John is a neuroscience enthusiast with a passion for education and outreach. He has been involved in various neuroscience initiatives and is dedicated to promoting awareness about the brain."
+                        bio=" "
                     />
                     <Profile
                         name="Devi Anand"
-                        position="Events Coordinator"
-                        bio="John is a neuroscience enthusiast with a passion for education and outreach. He has been involved in various neuroscience initiatives and is dedicated to promoting awareness about the brain."
+                        position="Secretary"
+                        bio=" "
                     />
                     <Profile
                         name="Urja Varatkar"
-                        position="Events Coordinator"
-                        bio="John is a neuroscience enthusiast with a passion for education and outreach. He has been involved in various neuroscience initiatives and is dedicated to promoting awareness about the brain."
+                        position="Outreach Coordinator"
+                        bio=" "
                     />
                 </div>
             </div>

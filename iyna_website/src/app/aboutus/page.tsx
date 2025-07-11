@@ -26,7 +26,7 @@ export default function AboutUsPage() {
 
                 </div>
                 <div className='items-center lg:mb-50'>
-                    <h1 className="lg:text-7xl md:text-7xl text-5xl max-md:text-center font-bold mb-12 text-white"><span className='text-faded-blue'>Empowering young</span> neuroscientists</h1>
+                    <h1 className="lg:text-7xl md:text-7xl text-5xl max-md:text-center font-bold mb-12 text-white"><span className='text-[#9dd2df]'>Empowering young</span> neuroscientists</h1>
                     <p className="text- lg:text-xl text-md md:text-xl text-lavender max-md:text-center md:leading-12 2xl:max-w-[50rem] xl:leading-16">At IYNA - LWSD Chapter, we hope to inspire the next generation of neuroscience. From hosting workshops to competitions to even hosting NeuroPodcast—our Spotify podcast— we strive to make a positive impact on our community filled with curious students.</p>
                     <div className='bg-lavender h-1 md:w-1/3 mt-12'></div>
                 </div>
@@ -37,7 +37,7 @@ export default function AboutUsPage() {
                     <p className="text-lavender mt-4 text-lg max-md:text-center max-w-2xl lg:mr-8 leading-10">
                         The International Youth Neuroscience Association (IYNA) is a global community dedicated to fostering interest and education in neuroscience among young people. Our mission is to connect, educate, and inspire the next generation of neuroscientists through events, resources, and collaborative projects.
                     </p>
-                    <div className='invisible @7xl:visible bg-lavender h-30 w-1'></div>
+                    <div className='max-md:hidden @7xl:visible bg-lavender h-30 w-1'></div>
                     <ul className='about-list md:pl-30 pl-16'>
                         <li className='animate-fadeIn text-2xl md:text-3xl py-5 text-lavender'><span className='text-[#c6c6f5] font-bold'>Connect</span> with neuroscience enthusiasts</li>
                         <li className='animate-fadeIn text-2xl md:text-3xl py-5 text-lavender'><span className='text-[#c6c6f5] font-bold'>Educate</span> through our workshops</li>

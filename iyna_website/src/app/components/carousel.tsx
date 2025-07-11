@@ -6,16 +6,10 @@ export default function Carousel({ children }: { children: ReactNode }) {
     const targetRef = useRef(null);
     const sliderWrapper = useRef<HTMLDivElement>(null)
     const [isVisible, setIsVisible] = useState(false);
-    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState(false);
 
     const handleControl = React.useCallback((cardNum: number) => {
         const s = sliderWrapper.current
-
-        // if (s && s.children && s.children[0]) {
-        //     const paddingInline = parseFloat(s.style.paddingInline || "0");
-        //     console.log(s.style.paddingInline)
-        //     console.log((s.children[0] as HTMLElement).clientWidth + paddingInline);
-        // }
 
         // const o = 378;
         const o = 385;
@@ -24,6 +18,15 @@ export default function Carousel({ children }: { children: ReactNode }) {
         }
     }, []);
 
+    sliderWrapper.current?.addEventListener("scrollend", () => {
+        if(targetRef.current) {
+            const inputs = (targetRef.current as Element).querySelectorAll("input");
+            inputs.forEach(el => el.checked = true)
+            inputs[Math.round((sliderWrapper.current?.scrollLeft ?? 0) / 385) % 6].checked = true
+        }
+    })
+
+    
     useEffect(() => {
         let i = 0
         const timer = setInterval(() => {
@@ -59,7 +62,6 @@ export default function Carousel({ children }: { children: ReactNode }) {
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIsVisible(entry.isIntersecting);
-                console.log(isVisible)
                 observer.unobserve(entry.target)
             }
           }, {threshold: 0.5}

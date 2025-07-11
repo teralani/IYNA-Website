@@ -24,7 +24,7 @@ export default function Card({title, description, imageSrc, buttonText, buttonLi
     }, []); // The empty dependency array ensures this runs only once after initial render
 
     return (
-        <div id={title} className="flex flex-col bg-[#eff4f8] shadow-lg rounded-lg overflow-hidden h-[27rem] max-w-96 min-w-80 basis-1/3 m-8">
+        <div id={title} className="flex flex-col snap-center bg-[#eff4f8] shadow-lg rounded-lg overflow-hidden h-[27rem] max-w-96 min-w-80 basis-1/3 m-8">
             <Image
                 src={imageError? '/logo.png' : imageSrc}
                 alt={title}

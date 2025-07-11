@@ -30,7 +30,7 @@ export default async function Competitions() {
                     title={w.title}
                     description={w.description}
                     imageSrc={w.image_url}
-                    buttonText={"Registion Now"}
+                    buttonText={"Register Now"}
                     buttonLink={w.registration_link}
                     number={i}
                     key={i}

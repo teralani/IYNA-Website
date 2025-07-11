@@ -31,7 +31,7 @@ export default async function Workshops() {
                     title={w.title}
                     description={w.description}
                     imageSrc={w.image_url}
-                    buttonText={"Registion Now"}
+                    buttonText={"Register Now"}
                     buttonLink={w.registration_link}
                     key={i}
                 />
