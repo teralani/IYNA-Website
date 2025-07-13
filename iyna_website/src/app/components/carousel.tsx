@@ -26,6 +26,7 @@ export default function Carousel({ children }: { children: ReactNode }) {
         }
     })
 
+    sliderWrapper.current?.addEventListener("touchstart", () => {setIsClicked(true)})
     
     useEffect(() => {
         let i = 0

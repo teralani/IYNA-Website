@@ -2,6 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from 'react';
+import {Readex_Pro} from "next/font/google"
+
+const readex_pro = Readex_Pro({
+  subsets: ["latin"],
+});
 
 interface NavbarProps {
     selectedPage: number;
@@ -78,12 +83,12 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                             />
                             <div className={` @md:block name my-auto ${dark? "dark" : ""}`}>
                                 <div>
-                                    <p className="text-3xl my-auto">
+                                    <p className={`text-3xl my-auto ${readex_pro.className}`}>
                                         LWSD Chapter
                                     </p>
                                 </div>
                                 <div id="one" className="hidden md:block">
-                                    <p className="text-md my-auto">
+                                    <p className={`text-md my-auto ${readex_pro.className}`}>
                                        International Youth Neuroscience Association
                                     </p>
                                 </div>
