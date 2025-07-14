@@ -81,7 +81,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 height={90}
                                 className="h-24 w-auto max-md:h-14 max-md:my-auto"
                             />
-                            <div className={` @md:block name my-auto ${dark? "dark" : ""}`}>
+                            <div className={`hidden @md:block name my-auto ${dark? "dark" : ""}`}>
                                 <div>
                                     <p className={`text-3xl my-auto ${readex_pro.className}`}>
                                         LWSD Chapter
