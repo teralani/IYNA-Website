@@ -72,7 +72,8 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                     <Profile
                         name="Jane Karaca"
                         position="Media"
-                        bio="Coming Soon..." 
+                        bio="Hi! My name is Jane Karaca and I’m a rising Junior in Eastlake High School. I joined IYNA because I’m passionate about taking part in spreading science to a wider audience and bringing people together through learning and ambition. I’m especially interested in bioengineering and how it can play a big part in shaping the future of science. Outside of IYNA, I’ve earned my 1st Degree Black Belt in Taekwondo and enjoy playing piano in my free time." 
+                        srcSuffix="png"
                     />
                     <Profile
                         name="Neha Murkuri"
@@ -80,14 +81,16 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                         bio="Coming Soon..."
                     />
                     <Profile
-                        name="Varnika Elenderthal"
+                        name="Varnika Elenthendral"
                         position="Events"
-                        bio="Coming Soon..."
+                        bio="Hi everyone! My name is Varnika Elenthendral and I’m a rising sophomore at Tesla STEM High School with a strong interest in neuroscience and cognitive science. I'm fascinated by how the brain adapts, learns, and processes information, and I hope to pursue a future career in neurology or neuroscience."
+                        srcSuffix="png"
                     />
                     <Profile
                         name="Prajna Sakshi"
                         position="Events"
-                        bio="Coming Soon..."
+                        bio="Prajna Sakshi is a junior at Eastlake High School who has an interest in the medical field, particularly in the area of neuroscience. She hopes to address the pressing issue of addiction, both substance-related and behavioral, and strives to make a meaningful impact on community health. She has actively explored her interest in medicine through her involvement in Health Occupations Students of America (HOSA), the Youth Advisory Board of the Digital Youth Lab (UW-YAB), and by volunteering at Cornerstone Medical Clinic (CMS). In addition to her academic pursuits, Prajna is a National Honor Society (NHS) officer. Music is another passion of hers, one that has become a bridge to her interest in medicine. With over 100 hours of volunteer experience at Redmond Care and Rehabilitation and Aegis Living Marymoor and Issaquah, she provides music therapy through live guitar and vocal performances. She is also a varsity tennis player who competed in KingCo during her freshman year and actively participates in USTA matches. She believes that being a part of the IYNA will be an ideal way for her to continue her journey of pursuing neuroscience and advocacy."
+                        srcSuffix="png"
                     />
                     <Profile
                         name="Arka Samatham"

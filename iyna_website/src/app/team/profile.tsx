@@ -5,9 +5,10 @@ type ProfileProps = {
     name: string;
     position: string;
     bio: string;
+    srcSuffix?: string
 };
 
-export default function Profile({name, position, bio} : ProfileProps) {
+export default function Profile({name, position, bio, srcSuffix = 'jpg'} : ProfileProps) {
     const bioRef = useRef<HTMLDivElement>(null);
     const [more, setMore] = useState(true);
     const handleClick = () => {
@@ -19,7 +20,7 @@ export default function Profile({name, position, bio} : ProfileProps) {
             }
         }
     }
-    const [currentSrc, setCurrentSrc] = useState(`/${name.replaceAll(" ", "")}.jpg`);
+    const [currentSrc, setCurrentSrc] = useState(`/${name.replaceAll(" ", "")}.${srcSuffix}`);
     const handleError = () => {setCurrentSrc("/profilefallback.jpg")}
     return (
         <div ref={bioRef} className={`profile-card bg-white shadow-lg rounded-lg p-4 m-4 w-80 h-min overflow-ellipsis ${bio.length < 1? "hidden" : ""}`}>
