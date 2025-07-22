@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Navbar from '../navbar';
 import Footer from '../components/footer';
 import { Metadata } from 'next';
+// import PenCircle from '../components/circle';
+import HoverCircle from '../components/hovercircle';
 
 
 export const metadata: Metadata = {
@@ -31,8 +33,21 @@ export default function AboutUsPage() {
                     <div className='bg-lavender h-1 md:w-1/3 mt-12'></div>
                 </div>
             </div>
+            <div className='flex md:flex-row flex-col max-md:h-[55rem] h-96'>
+                <div className="overflow-y-hidden text-white bg-blue text-center flex-1 max-md:h-40 h-auto text-5xl flex flex-col justify-center py-5">
+                    {/* <h1>Hosted</h1><span className='overflow-y-hidden'><p className="py-1 text-7xl" >5+</p></span><h1>events</h1> */}
+                    <h1>Hosted</h1><span className='flex justify-center'><HoverCircle text="5+" textClass='py-1 text-7xl' strokeColor='#faf8c8'></HoverCircle></span><h1>events</h1>
+                </div>
+                <div className="overflow-y-hidden text-white bg-[#6799a6] text-center flex-1 max-md:h-40 h-auto text-5xl flex flex-col justify-center py-5">
+                    <h1>Impacted</h1><span className='flex justify-center'><HoverCircle text="100+" textClass='py-1 text-7xl' strokeColor='#faf8c8'></HoverCircle></span><h1 className=''>passionate neuroscientists</h1>
+                </div>
+                <div className="overflow-y-hidden text-white bg-dark-blue text-center flex-1 max-md:h-40 h-auto text-5xl flex flex-col justify-center py-5">
+                    <h1>Reached</h1><span className='flex justify-center'><HoverCircle text="4+" textClass='py-1 text-7xl' strokeColor='#faf8c8'></HoverCircle></span><h1>schools</h1>
+                </div>
+            </div>
             <div className='text-white py-20 md:py-80 px-8 bg-purple'>
-                <h1 className='text-center text-5xl font-bold pb-2 md:pb-10'>Our Mission</h1>
+                {/* <h1 className='text-center text-5xl font-bold pb-2 md:pb-10'>Our Mission</h1> */}
+                <span className='flex justify-center w-screen'><HoverCircle text="Our Mission" textClass='text-center text-5xl font-bold pb-2 md:pb-10' strokeColor="#faf8c8"></HoverCircle></span>
                 <div className="@container flex-wrap flex flex-row items-center justify-center">
                     <p className="text-lavender mt-4 text-md md:tex-lg max-md:text-center max-w-2xl lg:mr-8 leading-8 md:leading-10 max-md:pb-7">
                         The International Youth Neuroscience Association (IYNA) is a global community dedicated to fostering interest and education in neuroscience among young people. Our mission is to connect, educate, and inspire the next generation of neuroscientists through events, resources, and collaborative projects.

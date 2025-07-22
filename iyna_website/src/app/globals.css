@@ -750,3 +750,29 @@ h2.dot-seen {
     background-size: cover;
   }
 }
+/* 
+.marker {
+  position: relative;
+  margin: 0 40px;
+  text-decoration: none;
+  svg {
+    position: absolute;
+    left: 0;
+    top: -50%;
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    pointer-events: none;   
+  }
+  path {
+    transition: stroke-dashoffset 300ms linear;
+    stroke-width: 1.0;
+    stroke: rgb(255, 255, 255);
+    fill: none;
+    stroke-linecap: round;
+  }
+
+}
+.marker:hover path {
+  stroke-dashoffset: 0;
+} */

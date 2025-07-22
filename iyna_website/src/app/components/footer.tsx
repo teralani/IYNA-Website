@@ -19,17 +19,17 @@ export default function Footer() {
                             className="mb-2 inline-block bg-purple border-t-0"
                             style={{width: "60px", height: "2px"}}
                         />
-                        <p>
-                            <Link href="/" className="text-lavender">Home</Link>
+                        <p className="underline">
+                            <Link href="/" className="text-lavender hover:text-faded-blue">Home</Link>
                         </p>
-                        <p>
-                            <Link href="/events" className="text-lavender">Events</Link>
+                        <p className="underline">
+                            <Link href="/events" className="text-lavender hover:text-faded-blue">Events</Link>
                         </p>
-                        <p>
-                            <Link href="/team" className="text-lavender">Our Team</Link>
+                        <p className="underline">
+                            <Link href="/team" className="text-lavender hover:text-faded-blue">Our Team</Link>
                         </p>
-                        <p>
-                            <Link href="/aboutus" className="text-lavender">About Us</Link>
+                        <p className="underline">
+                            <Link href="/aboutus" className="text-lavender hover:text-faded-blue">About Us</Link>
                         </p>
                     </div>
                     <div className="w-34 mb-4 mx-3">
@@ -38,17 +38,17 @@ export default function Footer() {
                             className="mb-2 inline-block bg-purple border-t-0"
                             style={{width: "60px", height: "2px"}}
                         />
-                        <p>
-                            <Link href="#!" className="text-lavender">Workshops</Link>
+                        <p className="underline">
+                            <Link href="#!" className="text-lavender hover:text-faded-blue">Workshops</Link>
                         </p>
-                        <p>
-                            <Link href="#!" className="text-lavender">Competitions</Link>
+                        <p className="underline">
+                            <Link href="#!" className="text-lavender hover:text-faded-blue">Competitions</Link>
                         </p>
-                        <p>
-                            <Link href="#!" className="text-lavender">NeuroPodcast</Link>
+                        <p className="underline">
+                            <Link href="#!" className="text-lavender hover:text-faded-blue">NeuroPodcast</Link>
                         </p>
-                        <p>
-                            <Link href="#!" className="text-lavender">Fundraisers</Link>
+                        <p className="underline">
+                            <Link href="#!" className="text-lavender hover:text-faded-blue">Fundraisers</Link>
                         </p>
                     </div>
                 </div>

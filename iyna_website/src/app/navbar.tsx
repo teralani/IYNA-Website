@@ -63,7 +63,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
     }, []);
     return (        
         <nav
-        className="fixed w-screen z-20 flex flex-col justify-center"
+        className={`${readex_pro.className} fixed w-screen z-20 flex flex-col justify-center`}
         >
             <div className="md:hidden fixed w-15 h-15 right-[5dvw] bottom-[5dvw] origin-bottom-right">
                 <div className="scroll flex flex-col justify-center bg-[#6d9bc2a0] backdrop-blur-lg rounded-full w-full h-full cursor-pointer border-1 border-faded-blue" onClick={() => window.scrollTo({top: 0, left: 0, behavior: "smooth",})}>
@@ -144,7 +144,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                         className={`${selectedPage == 2? "selected": ""} text-xl md:text-lg a dropdown`}
                         >
                         Events
-                        <svg className="ml-2 mt-[4.5px]" viewBox='0 0 140 140' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><g><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' fill='white'/></g></svg>
+                        <svg className="max-md:hidden ml-2 mt-[5.5px]" viewBox='0 0 140 140' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><g><path fill={`${dark? "white" : "black"}`} d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' /></g></svg>
                         </Link>
                         <Link
                         href="/team"
