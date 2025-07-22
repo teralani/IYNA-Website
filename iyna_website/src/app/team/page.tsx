@@ -34,17 +34,17 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                     <Profile
                         name="Advaith Shyam"
                         position="Vice President"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Devi Anand"
                         position="Secretary"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Ashika Garg"
                         position="Treasurer"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Aniketh Terala"
@@ -54,17 +54,17 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                     <Profile
                         name="Urja Varatkar"
                         position="Outreach Coordinator"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Rewa Rathee"
                         position="School Representative (Tesla Stem)"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Layan Sattout"
                         position="School Representative  (Juanita High)"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                 </div>
                 <h1 className="max-md:px-6 text-6xl font-bold my-12">Interns</h1>
@@ -72,32 +72,32 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                     <Profile
                         name="Jane Karaca"
                         position="Media"
-                        bio="" 
+                        bio="Coming Soon..." 
                     />
                     <Profile
                         name="Neha Murkuri"
                         position="Media"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Varnika Elenderthal"
                         position="Events"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Prajna Sakshi"
                         position="Events"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Arka Samatham"
                         position="Events"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                     <Profile
                         name="Arsema Sileshi"
                         position="Finance"
-                        bio=" "
+                        bio="Coming Soon..."
                     />
                 </div>
             </div>

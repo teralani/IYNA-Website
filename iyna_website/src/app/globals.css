@@ -164,6 +164,19 @@ nav {
       background-color: white;
     }
   }
+  .dropdown:hover svg {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+  }
+  .dropdown svg {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+    transform-origin: center center;
+  }
+  .dropdown {
+    display: flex !important;
+
+  }
   .wrapper:has(.dropdown:hover) + .popup, .popup:hover {
     opacity: 1;
     visibility: visible;

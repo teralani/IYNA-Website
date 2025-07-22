@@ -12,9 +12,10 @@ type CardProps = {
     buttonLink?: string;
     disable?: boolean;
     buttonHidden? :boolean
+    objectFit? : string
 };
 
-export default function Card({title, description, imageSrc, buttonText, buttonLink, number = 0, disable = false, buttonHidden = false}: CardProps) {
+export default function Card({title, description, imageSrc, buttonText, buttonLink, number = 0, disable = false, buttonHidden = false, objectFit="object-cover"}: CardProps) {
     const [imageError, setImageError] = useState(false);    
     useEffect(() => {
         // This code runs after the component has mounted
@@ -30,7 +31,7 @@ export default function Card({title, description, imageSrc, buttonText, buttonLi
                 alt={title}
                 width={400}
                 height={192}
-                className={`w-full h-48 ${imageError? "object-contain" : "object-cover"} loading`}
+                className={`w-full h-48 ${imageError? "object-contain" : objectFit} loading`}
                 onError={() => {
                     setImageError(true);
                 }}
