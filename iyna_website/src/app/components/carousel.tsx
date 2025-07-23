@@ -32,7 +32,7 @@ export default function Carousel({ children }: { children: ReactNode }) {
         let i = 0
         const timer = setInterval(() => {
             // Accessing All the carousel Items 
-            if (!isClicked) {
+            if (!isClicked && isVisible) {
                 if(i < 6){
                     handleControl(i);
                     if (targetRef.current) {
@@ -53,7 +53,7 @@ export default function Carousel({ children }: { children: ReactNode }) {
         },4000)
 
         return () => {window.clearInterval(timer)}
-    }, [handleControl, isClicked])
+    }, [handleControl, isClicked, isVisible])
     
 
       

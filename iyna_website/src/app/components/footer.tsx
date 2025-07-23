@@ -39,16 +39,16 @@ export default function Footer() {
                             style={{width: "60px", height: "2px"}}
                         />
                         <p className="underline">
-                            <Link href="#!" className="text-lavender hover:text-faded-blue">Workshops</Link>
+                            <Link href="/events/workshops" className="text-lavender hover:text-faded-blue">Workshops</Link>
                         </p>
                         <p className="underline">
-                            <Link href="#!" className="text-lavender hover:text-faded-blue">Competitions</Link>
+                            <Link href="/events#competitions" className="text-lavender hover:text-faded-blue">Competitions</Link>
                         </p>
                         <p className="underline">
-                            <Link href="#!" className="text-lavender hover:text-faded-blue">NeuroPodcast</Link>
+                            <Link href="/events#neuropodcast" className="text-lavender hover:text-faded-blue">NeuroPodcast</Link>
                         </p>
                         <p className="underline">
-                            <Link href="#!" className="text-lavender hover:text-faded-blue">Fundraisers</Link>
+                            <Link href="/events#fundraisers" className="text-lavender hover:text-faded-blue">Fundraisers</Link>
                         </p>
                     </div>
                 </div>

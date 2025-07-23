@@ -47,7 +47,7 @@ export default function AboutUsPage() {
             </div>
             <div className='text-white py-20 md:py-80 px-8 bg-purple'>
                 {/* <h1 className='text-center text-5xl font-bold pb-2 md:pb-10'>Our Mission</h1> */}
-                <span className='flex justify-center w-screen'><HoverCircle text="Our Mission" textClass='text-center text-5xl font-bold pb-2 md:pb-10' strokeColor="#faf8c8"></HoverCircle></span>
+                <span className='flex justify-center w-screen pb-2 md:pb-10'><HoverCircle text="Our Mission" textClass='text-center text-5xl font-bold p-2' strokeColor="#faf8c8"></HoverCircle></span>
                 <div className="@container flex-wrap flex flex-row items-center justify-center">
                     <p className="text-lavender mt-4 text-md md:tex-lg max-md:text-center max-w-2xl lg:mr-8 leading-8 md:leading-10 max-md:pb-7">
                         The International Youth Neuroscience Association (IYNA) is a global community dedicated to fostering interest and education in neuroscience among young people. Our mission is to connect, educate, and inspire the next generation of neuroscientists through events, resources, and collaborative projects.

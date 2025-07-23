@@ -755,7 +755,7 @@ h2.dot-seen {
   path {
     stroke-dashoffset: 92453.3515625;
     stroke-dasharray: 92453.3515625;
-    animation: drawPath 4s ease-in-out forwards;
+    animation: drawPath 5s ease-in-out forwards;
   }
   #path2 {
     animation: drawPath 2s ease-in-out 500ms forwards;

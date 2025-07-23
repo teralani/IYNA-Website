@@ -52,9 +52,15 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                         bio="Aniketh is a senior at Eastlake High School in Sammamish, Washington. He first became fascinated by the world of neuroscience when learning how neuroanatomy influenced the beginnings of AI models. Aniketh joined IYNA due to his passion for the intersection of neuroscience and computer science, especially in new research. He hopes to host and organize events to expand neuroscience education and awareness in addition to inspiring the next generation of neuroscience leaders. Outside of the LWSD Chapter of IYNA, you can catch him exploring new hikes, learning new languages, and debating global issues in Model UN conferences. Aniketh is beyond ecstatic to see how this year's IYNA workshops, labs, and competitions will inspire new students."
                     />
                     <Profile
+                        name="Ananya Raichura"
+                        position="Public Relations"
+                        bio="Ananya Raichura is a senior at Glacier Peak High School in Snohomish, Washington, with a strong interest in medicine and neuroscience. Her curiosity about why people think and behave the way they do led her to explore the brain’s impact on everyday life. She joined IYNA to dive deeper into neuroscience and help others discover its real-world connections through creative, hands-on workshops. Ananya is passionate about making science accessible and hopes to inspire lasting curiosity in others. Outside of IYNA, she enjoys photography, hiking, scrapbooking, traveling, listening to music, and playing sports. She loves spending time in nature, capturing meaningful moments, and making memories with the people around her. Ananya is excited to be part of a driven and passionate team, and she looks forward to helping the chapter grow while exploring new ways to share the wonder of neuroscience."
+                        srcSuffix="jpg"
+                    />
+                    <Profile
                         name="Urja Varatkar"
                         position="Outreach Coordinator"
-                        bio="Coming Soon..."
+                        bio="Hello! My name is Urja Varatkar and I’m passionate about exploring neuroscience and sharing that excitement with the community through neuroscience outreach and education. I love connecting with others and helping make neuroscience more accessible and inspiring. Outside of neuroscience, I enjoy spending time with my family, friends, and my dog. In my free time, I love to bake and do taekwondo."
                     />
                     <Profile
                         name="Rewa Rathee"
@@ -64,7 +70,7 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                     <Profile
                         name="Layan Sattout"
                         position="School Representative  (Juanita High)"
-                        bio="Coming Soon..."
+                        bio="Layan Sattout is a high school student in the class of 2026 at Juanita High School in Kirkland, Washington. With a deep passion for neuroscience and research, she actively seeks out programs and initiatives that challenge her curiosity and help her grow. She joined IYNA to be part of a movement that makes neuroscience exciting and accessible for all students, especially those who may not see themselves represented in the field. Layan believes that science should be shared, understood, and celebrated, and she’s excited to contribute to that through IYNA. In her free time, she enjoys cooking and baking, spending time with friends, staying organized, and even solving math problems just for fun."
                     />
                 </div>
                 <h1 className="max-md:px-6 text-6xl font-bold my-12">Interns</h1>

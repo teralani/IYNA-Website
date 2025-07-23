@@ -101,7 +101,6 @@ const HoverCircle = ({text = "Hover Me", textClass = "", strokeColor = "white"})
     const pathLength = path.getTotalLength();
     path.style.strokeDasharray = `${pathLength}`;
     path.style.strokeDashoffset = `${pathLength}`; // Initially hidden
-    path.style.transition = "stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
 
 
     // --- Intersection Observer Logic ---
@@ -111,18 +110,22 @@ const HoverCircle = ({text = "Hover Me", textClass = "", strokeColor = "white"})
       }
     };
 
-    // const resetPath = () => {
-    //   if (pathRef.current) {
-    //     // Recalculate dashoffset based on the current path's length
-    //     pathRef.current.style.strokeDashoffset = `${pathRef.current.getTotalLength()}`;
-    //   }
-    // };
+    function resetPath() {
+      if (pathRef.current) {
+        // Recalculate dashoffset based on the current path's length
+        pathRef.current.style.strokeDashoffset = `${pathRef.current.getTotalLength()}`;
+      }
+    }
 
     const observerOptions = {
       root: null,
       rootMargin: '-40% 0px -40% 0px',
       threshold: 0.9,
     };
+
+    path.style.transition = "stroke-dashoffset 0s cubic-bezier(0.4, 0, 0.2, 1)";
+    resetPath()
+    path.style.transition = "stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
@@ -151,7 +154,6 @@ const HoverCircle = ({text = "Hover Me", textClass = "", strokeColor = "white"})
           position: relative;
           text-decoration: none;
           display: inline-block;
-          cursor: pointer;
         }
 
         .marker :global(svg) {
