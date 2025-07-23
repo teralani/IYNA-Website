@@ -53,7 +53,7 @@ const HoverCircle = ({text = "Hover Me", textClass = "", strokeColor = "white"})
     const dθ_max = 0.3;
 
     const widthGain = 1;
-    const heightGain = 1;
+    const heightGain = 1.1;
 
     // Get current dimensions of the marker text
     const width = marker.offsetWidth;
@@ -74,6 +74,8 @@ const HoverCircle = ({text = "Hover Me", textClass = "", strokeColor = "white"})
     svg.style.transform = `scale(${(2 * widthGain * width) / height}, ${heightGain})`;
     svg.setAttribute("width", `${width}`);
     svg.setAttribute("height", `${height}`);
+    svg.setAttribute("z-index", "-1")
+
 
     // Create or select the path element
     let path = svg.querySelector("path");
@@ -92,7 +94,7 @@ const HoverCircle = ({text = "Hover Me", textClass = "", strokeColor = "white"})
     path.setAttribute("d", circlePath(cx, cy, base_r, dr_min, dr_max, θ0_min, θ0_max, dθ_min, dθ_max));
     path.style.fill = "none";
     path.style.stroke = strokeColor;
-    path.style.strokeWidth = "2";
+    path.style.strokeWidth = "4";
 
     // Get the actual length of the generated path for stroke animation
     // This must be done AFTER the 'd' attribute is set and the element is in the DOM

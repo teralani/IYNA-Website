@@ -38,8 +38,8 @@ export default function AboutUsPage() {
                     {/* <h1>Hosted</h1><span className='overflow-y-hidden'><p className="py-1 text-7xl" >5+</p></span><h1>events</h1> */}
                     <h1>Hosted</h1><span className='flex justify-center'><HoverCircle text="5+" textClass='py-1 text-7xl' strokeColor='#faf8c8'></HoverCircle></span><h1>events</h1>
                 </div>
-                <div className="overflow-y-hidden text-white bg-[#6799a6] text-center flex-1 max-md:h-40 h-auto text-5xl flex flex-col justify-center py-5">
-                    <h1>Impacted</h1><span className='flex justify-center'><HoverCircle text="100+" textClass='py-1 text-7xl' strokeColor='#faf8c8'></HoverCircle></span><h1 className=''>passionate neuroscientists</h1>
+                <div className="overflow-y-clips text-white bg-[#6799a6] text-center flex-1 max-md:h-40 h-auto text-5xl flex flex-col justify-center py-5">
+                    <h1>Impacted</h1><span className='flex justify-center'><HoverCircle text="100+" textClass='py-1 text-7xl' strokeColor='#faf8c8'></HoverCircle></span><h1 className='max-w-auto'>passionate neuroscientists</h1>
                 </div>
                 <div className="overflow-y-hidden text-white bg-dark-blue text-center flex-1 max-md:h-40 h-auto text-5xl flex flex-col justify-center py-5">
                     <h1>Reached</h1><span className='flex justify-center'><HoverCircle text="4+" textClass='py-1 text-7xl' strokeColor='#faf8c8'></HoverCircle></span><h1>schools</h1>
