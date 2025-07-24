@@ -28,23 +28,22 @@ export default function TeamPage() {
                     <Profile
                         name="Haarika Nidadavolu"
                         position="President"
-                        bio="Haarika is a senior at Eastlake High School in Sammamish, Washington. In addition to her enthusiasm for the IYNA LWSD Chapter, Haarika spends her time outside of school reading historical fiction novels and practicing Indian classical dance. She is currently conducting research in neuroscience and hopes to pursue a career in neurosurgery.
-Haarika became involved in IYNA because she is passionate about exploring the brain and helping other students connect science to real-world impact. She believes that sparking curiosity at a young age is key to building the next generation of scientists, researchers, and healthcare leaders."
+                        bio="Haarika is a senior at Eastlake High School in Sammamish, Washington. In addition to her enthusiasm for the IYNA LWSD Chapter, Haarika spends her time outside of school reading historical fiction novels and practicing Indian classical dance. She is currently conducting research in neuroscience and hopes to pursue a career in neurosurgery. Haarika became involved in IYNA because she is passionate about exploring the brain and helping other students connect science to real-world impact. She believes that sparking curiosity at a young age is key to building the next generation of scientists, researchers, and healthcare leaders."
                     />
                     <Profile
                         name="Advaith Shyam"
                         position="Vice President"
-                        bio="Coming Soon..."
+                        bio="Advaith is a senior at Eastlake High School in Sammamish, Washington. He first developed a passion for neuroscience after reading one of his many fun fact books and discovering the complexity of cognition within the human brain. Advaith became a part of IYNA because of his deep interest for the connection of neuroscience to other anatomical sciences, such as neurocardiology, as well as his desire to spread knowledge to the neighboring middle schools and high schools. Away from developing IYNA workshops and hosting the IYNA LWSD NeuroPodcast, you can find Advaith watching the new movies released or producing music. Advaith can't wait to see how IYNA grows this year and welcomes everyone to the student-led IYNA community."
                     />
                     <Profile
                         name="Devi Anand"
                         position="Secretary"
-                        bio="Coming Soon..."
+                        bio="Hi! I’m Devi, and I’m currently serving as the Secretary of the International Youth Neuroscience Association (IYNA). I help with organizing meetings, keeping track of important documents, and making sure everything runs smoothly behind the scenes. I’m really passionate about making neuroscience more accessible and exciting for students everywhere. When I’m not working on IYNA projects, you can probably find me onstage—I absolutely love theatre and performing. It’s one of my favorite ways to explore new perspectives and connect with people."
                     />
                     <Profile
                         name="Ashika Garg"
                         position="Treasurer"
-                        bio="Coming Soon..."
+                        bio="Ashika Garg is a freshmen at the University of Washington in Seattle, Washington. She hopes to pursue a career in medicine and is fascinated by neurosurgery. She joined IYNA to learn more about neuroscience while being part of a community that seeks to educate and inspire more individuals. Outside of her passion for medicine she loves to read books and bake. She hopes to double major in neuroscience at business at the University of Washington and spends her time working on her organization that raises awareness for blood cancer. Ashika is excited to be a part of the IYNA team and take part in all of their exciting events."
                     />
                     <Profile
                         name="Aniketh Terala"
@@ -84,7 +83,8 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                     <Profile
                         name="Neha Murkuri"
                         position="Media"
-                        bio="Coming Soon..."
+                        bio="Hi, I’m Neha Murkuri, and I am a rising junior in Eastlake High School. I am very passionate about neuroscience and mental health advocacy! I joined IYNA because I believe in making neuroscience more accessible—especially in areas that are often overlooked, like chronic pain conditions and invisible disabilities. As someone living with CRPS, a rare neurological pain disorder, I’ve experienced firsthand how limited public awareness can be, and I’m excited to contribute to a community that values education, innovation, and impact. Outside of school and IYNA, I love to write poetry, dance in three different forms, play the piano, and swim. Excited to be part of this journey and can’t wait to see what we accomplish together!"
+                        srcSuffix="png"
                     />
                     <Profile
                         name="Varnika Elenthendral"
@@ -106,7 +106,8 @@ Haarika became involved in IYNA because she is passionate about exploring the br
                     <Profile
                         name="Arsema Sileshi"
                         position="Finance"
-                        bio="Coming Soon..."
+                        bio="Hi, my name is Arsema Sileshi. I’m someone who loves exploring creative projects, whether it’s photography, writing, or anything that challenges me to think differently. I really enjoy studying history and understanding the world from different perspectives. People often describe me as organized and shy, but once I get to know everyone, you’ll find that I also really love to laugh and have fun with the people around me. I’m excited to be here, meet new people, and grow in any way I can during this internship."
+                        srcSuffix="jpeg"
                     />
                 </div>
             </div>
