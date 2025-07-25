@@ -101,7 +101,7 @@ export default function TeamPage() {
                     <Profile
                         name="Arka Samatham"
                         position="Events"
-                        bio="Coming Soon..."
+                        bio="Hi, my name is Arka Samatham, and I’m a sophomore at Tesla STEM high school aspiring to become a neuroscientist. Through my work, I hope to build a collaborative and diverse community that breaks medical stigma for future generations. I joined IYNA to make the world of neuroscience more accessible and engaging for younger students. I believe that creating that spark of interest at young age is the key to shaping the next generation of doctors. Outside of academics, I love to pursue my hobby of playing basketball and tennis."
                     />
                     <Profile
                         name="Arsema Sileshi"
