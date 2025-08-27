@@ -153,15 +153,18 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                         Our Team
                         </Link>
                     </div>
+                
+                    <div className="hidden md:block flex-1 justify-between pl-8">
+                        <button className={`contact float-end mr-[8%] ${dark? "dark" : ""}`}>
+                            <Link
+                                href="mailto:iynalwsdchapter@gmail.com"
+                                className=" text-lg border-1 px-7 py-3 rounded-full transition-colors duration-400 float-right"
+                            >
+                                <span className="line-clamp-1">Contact Us</span>
+                            </Link>
+                        </button>
+                    </div>
 
-                    <button className={`hidden md:block contact flex-1 pr-20 ${dark? "dark" : ""}`}>
-                        <Link
-                            href="mailto:iynalwsdchapter@gmail.com"
-                            className=" text-lg border-1  px-8 py-3 rounded-full transition-colors duration-400 float-right"
-                        >
-                            Contact Us
-                        </Link>
-                    </button>
                 </div>
             </div>
             <div className="hidden md:block popup border-1 border-cyan mx-auto rounded-lg">
