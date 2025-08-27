@@ -81,14 +81,14 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 height={90}
                                 className="h-24 w-auto max-md:h-14 max-md:my-auto"
                             />
-                            <div className={`hidden @md:block name my-auto ${dark? "dark" : ""}`}>
+                            <div className={`sm:hidden @md:block name my-auto ${dark? "dark" : ""}`}>
                                 <div>
-                                    <p className={`text-3xl my-auto ${readex_pro.className}`}>
+                                    <p className={`text-2xl md:text-3xl my-auto ${readex_pro.className}`}>
                                         LWSD Chapter
                                     </p>
                                 </div>
-                                <div id="one" className="hidden md:block">
-                                    <p className={`text-md my-auto ${readex_pro.className}`}>
+                                <div id="one" className=" @md:block">
+                                    <p className={`hidden md:block md:text-md my-auto ${readex_pro.className}`}>
                                        International Youth Neuroscience Association
                                     </p>
                                 </div>

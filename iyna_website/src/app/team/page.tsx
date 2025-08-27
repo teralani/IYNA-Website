@@ -64,7 +64,7 @@ export default function TeamPage() {
                     <Profile
                         name="Rewa Rathee"
                         position="School Representative (Tesla Stem)"
-                        bio="Coming Soon..."
+                        bio="Hi! My name is Rewa Rathee, and I’m a senior at Tesla STEM High School aspiring to become a neurosurgeon. Having witnessed the impact of brain tumors and neurodegenerative diseases within my own family, I joined IYNA to help raise awareness and share small, practical steps people can take to reduce their risk. Beyond academics, I enjoy going for walks, playing volleyball, and getting lost in a good book!"
                     />
                     <Profile
                         name="Layan Sattout"
