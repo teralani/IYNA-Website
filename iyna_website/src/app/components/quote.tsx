@@ -30,19 +30,22 @@ const Quote = ({children, author} : {children : ReactNode, author: string}) => {
                     .quote::after {
                         content: "";
                         width: 85%;
-                        height: 3px;
+                        height: 4px;
                         display: block;
                         background-color: var(--color-blue);
-                        transform: translate(5rem, -30);
+                        left: 5rem;
+                        top: -30;
+                        position: relative;
                     }
                     #t::before {
                     content: "";
-                        height: 3px;
+                        height: 4px;
                         display: block;
                         background-color: var(--color-blue);
-                        width: 40%;
-                        position: absolute;
-                        transform: translate(18rem, 10);
+                        width: 50%;
+                        position: relative;
+                        left:18rem;
+                        top: 10;
                     }
             }
             `}</style>
