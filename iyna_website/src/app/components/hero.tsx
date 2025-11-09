@@ -15,7 +15,7 @@ export default function Hero() {
                 height={1080}
                 className="w-full h-auto object-contain"
             /> */}
-            <div className="max-lg:backdrop-blur-md w-full h-screen absolute">
+            <div className="bg-[#00000099] backdrop-blur-md w-full h-[120%] absolute">
             </div>
             <svg className="brain-svg lg:h-max opacity-[0.5]" width="1350.000000pt" height="1038.000000pt" viewBox="0 0 1350.000000 1038.000000" preserveAspectRatio="xMidYMid meet">
                     <defs>
@@ -33,8 +33,8 @@ export default function Hero() {
                     </g>
                  </svg>
             <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[var(--foreground)]">
-                <h1 className={`text-4xl md:text-6xl mb-4 text-white md:mx-auto md:max-w-[80%] ${gantari.className}`} style={{fontWeight: 600}}>Discover your passion for neuroscience.</h1>
-                <p className={`text-lg md:text-2xl mb-8 text-lavender text-center md:mx-auto md:max-w-[80%] ${gantari.className}`}>Connect and learn more about the neuroscience community as a part of the LWSD Chapter of IYNA. Discover how joining IYNA can inspire you, today!</p>
+                <h1 className={`text-4xl md:text-5xl xl:text-6xl mb-4 text-white md:mx-auto md:max-w-[80%] ${gantari.className}`} style={{fontWeight: 600}}>Discover your passion for neuroscience.</h1>
+                <p className={`text-lg md:text-xl xl:text-2xl mb-8 text-lavender text-center md:mx-auto md:max-w-[80%] ${gantari.className}`}>Connect and learn more about the neuroscience community as a part of the LWSD Chapter of IYNA. Discover how joining IYNA can inspire you, today!</p>
                 <a href="/aboutus" className="text-lg bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full max-md:text-md">
                     Learn More
                 </a>

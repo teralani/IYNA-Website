@@ -334,6 +334,11 @@ nav {
 }
 
 .hero {
+  background: fixed;
+  background-image: url("/neurons.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   h1 {
     animation: fadein 0.5s ease-in-out forwards;
     opacity: 0;
@@ -767,3 +772,11 @@ h2.dot-seen {
     stroke-dashoffset: 0;
   }
 }
+
+
+/* #quote:after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+} */

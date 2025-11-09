@@ -66,7 +66,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
         className={`${readex_pro.className} fixed w-screen z-20 flex flex-col justify-center`}
         >
             <div className="md:hidden fixed w-15 h-15 right-[5dvw] bottom-[5dvw] origin-bottom-right">
-                <div className="scroll flex flex-col justify-center bg-[#6d9bc2a0] backdrop-blur-lg rounded-full w-full h-full cursor-pointer border-1 border-faded-blue" onClick={() => window.scrollTo({top: 0, left: 0, behavior: "smooth",})}>
+                <div className="scroll flex flex-col justify-center bg-[#6d9bc2a0] backdrop-blur-lg rounded-full w-full h-full cursor-pointer border-1 border-white" onClick={() => window.scrollTo({top: 0, left: 0, behavior: "smooth",})}>
                     <svg stroke="gray" fill="white" className="mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/></svg>
                 </div>
             </div>

@@ -3,6 +3,7 @@ import Card from "./components/card";
 import Carousel from "./components/carousel";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
+import Quote from "./components/quote";
 import { PriorityQueue } from "./heap";
 import Navbar from "./navbar";
 import fs from 'fs/promises';
@@ -51,7 +52,13 @@ export default async function Home() {
   <div className="">
     <Navbar selectedPage={0} darken={true}/>
     <Hero />
-    <div className="bg-lavender py-30">
+    <div className="bg-faded-blue py-50">
+      <h1 className="text-center text-4xl md:text-5xl mb-6 md:mb-12 font-bold text-white">Our Mission</h1>
+      <Quote author = "Haarika Nidadavolu">
+        I founded the IYNA LWSD Chapter to create a space where students could explore neuroscience beyond the classroom and connect with others who share similar interests about the brain. My goal was to make neuroscience more accessible, whether through hands-on dissections, networking opportunities with guest speakers, or preparation for competitions such as the Brain Bee. By building this community, I hope members can not only further their understanding and involvement in the world of neuroscience, but also discover how it connects to real-world issues in healthcare and research.
+      </Quote>
+    </div>
+    <div className="bg-lavender py-50">
       <h1 className="text-center text-4xl md:text-5xl mb-6 md:mb-12 font-bold">Recent Events</h1>
       <Carousel>
        {displayed_events}
