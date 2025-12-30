@@ -30,10 +30,10 @@ export default function EventsPage() {
                 <Card 
                     title="Webinars"
                     description="Learn more from experts in the field of neuroscience through our engaging webinars. Our webinars are perfect for students and those interested in neuroscience."
-                    imageSrc="/workshop.jpg"
+                    imageSrc="/webinar.jpg"
                     buttonText="Register Now"
+                    buttonLink="/events/webinars"
                     number={2}
-                    disable={true}
                 />
                 <Card 
                     title="Competitions"

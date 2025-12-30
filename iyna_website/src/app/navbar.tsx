@@ -177,7 +177,7 @@ export default function Navbar({selectedPage, darken = false}: NavbarProps) {
                                 scroll={true}
                             >Workshops</Link></li>
                             <li><Link
-                                href={"/events#Webinars"}
+                                href={"/events/webinars"}
                                 scroll={true}
                             >Webinars</Link></li>
                             <li><Link

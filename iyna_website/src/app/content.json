@@ -20,6 +20,15 @@
                 "location": "Virtual",
                 "registration_link": "",
                 "image_url": "/chudler-webinar.jpg"
+            },
+            {
+                "title": "Webinar with Dr. Moritz",
+                "description": "Join us for a special webinar with Dr. Mortiz, who will share insights into his current neurotechnology research and career trajectories in neuroscience. He will also be answering questions through a live Q&A sesion!",
+                "date": "2026-1-14",
+                "time": "5-6 PM PST",
+                "location": "Virtual",
+                "registration_link": "",
+                "image_url": "/logo.png"
             }
         ],
         "fundraisers" : [
